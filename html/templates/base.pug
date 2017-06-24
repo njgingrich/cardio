@@ -1,3 +1,5 @@
+include ../mixins/mixins
+
 doctype html
 html(lang="en")
   head
@@ -5,4 +7,9 @@ html(lang="en")
     title Cardy - Small CSS Framework
 
   body
+    nav
+      ul
+        li
+          +link("components.html", 'Components')
+
     block content

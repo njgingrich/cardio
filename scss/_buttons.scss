@@ -1,0 +1,83 @@
+button {
+  align-self: flex-end;
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  margin: 0.2rem;
+  font-size: 14px;
+  border: 1px solid $gray-light;
+  border-radius: 0.2rem;
+  transition: all 200ms ease-in-out;
+  background-color: $white;
+
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  &:hover {
+    background-color: darken($white, 10%);
+  }
+}
+
+@mixin button-style($background, $color) {
+  &.outlined {
+    border-color: $background;
+    color: $background;
+    background-color: inherit;
+
+    &[disabled]:hover {
+      color: $background;
+      background-color: inherit;
+    }
+
+    &:hover {
+      background-color: $background;
+      color: $color;
+    }
+  }
+
+  &[disabled]:hover {
+    background-color: $background;
+  }
+
+  &:hover {
+    background-color: darken($background, 10%);
+  }
+}
+
+//= Color modifiers
+//
+button.primary {
+  @include button-style($color-primary, $white);
+}
+
+button.secondary {
+  @include button-style($gray-light, $white);
+}
+
+button.success {
+  @include button-style($color-success, $white);
+}
+
+button.warning {
+  @include button-style($color-warning, $white);
+}
+
+button.danger {
+  @include button-style($color-danger, $white);
+}
+
+//= Sizing
+//
+button.small {
+  font-size: 0.75rem;
+  padding: 0.25rem 1rem;
+}
+
+button.large {
+  font-size: 1.5rem;
+}
+
+button.xlarge {
+  font-size: 2rem;
+}
