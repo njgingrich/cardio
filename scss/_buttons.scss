@@ -5,7 +5,7 @@ button {
   margin: 0.2rem;
   font-size: 14px;
   border: 1px solid $gray-light;
-  border-radius: 0.2rem;
+  border-radius: $base-border-radius;;
   transition: all 200ms ease-in-out;
   background-color: $white;
 
@@ -20,8 +20,9 @@ button {
 }
 
 @mixin button-style($background, $color) {
+  border-color: $background;
+
   &.outlined {
-    border-color: $background;
     color: $background;
     background-color: inherit;
 
@@ -80,4 +81,20 @@ button.large {
 
 button.xlarge {
   font-size: 2rem;
+}
+
+.grouped button {
+  margin-right: -1px;
+  margin-left: 0;
+  border-radius: 0;
+
+  &:first-child {
+    border-top-left-radius: $base-border-radius;
+    border-bottom-left-radius: $base-border-radius;
+  }
+
+  &:last-child {
+    border-top-right-radius: $base-border-radius;
+    border-bottom-right-radius: $base-border-radius;
+  }
 }
