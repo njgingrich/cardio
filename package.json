@@ -1,0 +1,23 @@
+{
+  "name": "cardy",
+  "version": "1.0.0",
+  "description": "CSS library",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch scss:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/njgingrich/cardy.git"
+  },
+  "keywords": [
+    "css",
+    "framework"
+  ],
+  "author": "Nathan Gingrich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/njgingrich/cardy/issues"
+  },
+  "homepage": "https://github.com/njgingrich/cardy#readme"
+}
