@@ -1,0 +1,67 @@
+extends templates/base
+
+block content
+  h2 Grid
+  p Built with CSS Grid. The system works with 12 columns.
+
+  h3 Columns
+  p Add as many columns as you want, they will reflow as necessary.
+  .grid
+    .column
+      p.col-example Column 1
+    .column
+      p.col-example Column 2
+
+  .grid
+    .column
+      p.col-example Column 1
+    .column
+      p.col-example Column 2
+    .column
+      p.col-example Column 3
+    .column
+      p.col-example Column 4
+    .column
+      p.col-example Column 5
+    .column
+      p.col-example Column 6
+    .column
+      p.col-example Column 1
+    .column
+      p.col-example Column 2
+    .column
+      p.col-example Column 3
+    .column
+      p.col-example Column 4
+    .column
+      p.col-example Column 5
+    .column
+      p.col-example Column 6
+
+  p You can also use modifiers like half, one-third and two-thirds, one-fourth and three-fourths, or the numeric col-1 through col-12.
+
+  .grid
+    .column.half
+      p.col-example Column (half)
+    .column
+      p.col-example Column
+    .column.one-third
+      p.col-example Column (one-third)
+    .column
+      p.col-example Column
+
+  h3 Offsets
+
+  p Use offsets like offset-3 or offset-10 to push content to the side.
+
+  .grid
+    .column.offset-3.half
+      p.col-example Half-width col offset by 3
+  .grid
+    .column.offset-11
+      p.col-example Col offset by 11
+  .grid
+    .column.one-fourth
+      p.col-example Col width one fourth
+    .column.offset-3.one-third
+      p.col-example Third-width col offset by 3

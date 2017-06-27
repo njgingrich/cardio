@@ -1,0 +1,77 @@
+.grid {
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem;
+
+  @media (min-width: $breakpoint-sm) {
+    display: flex;
+  }
+}
+
+.column {
+  display: block;
+  flex: 1 1 0;
+  padding: 0.5rem;
+
+  @media (min-width: $breakpoint-sm) {
+    flex-basis: auto;
+  }
+
+  &:not(:last-child) {
+    padding-bottom: 0;
+  }
+}
+
+.half {
+  @media (min-width: $breakpoint-sm) {
+    flex: 0 0 50%;
+  }
+}
+
+.one-third {
+  @media (min-width: $breakpoint-sm) {
+    flex: 0 0 33.333%;
+  }
+}
+
+.two-thirds {
+  @media (min-width: $breakpoint-sm) {
+    flex: 0 0 66.666%;
+  }
+}
+
+.one-fourth {
+  @media (min-width: $breakpoint-sm) {
+    flex: 0 0 25%;
+  }
+}
+
+.three-fourths {
+  @media (min-width: $breakpoint-sm) {
+    flex: 0 0 75%;
+  }
+}
+
+$columns: 12;
+@mixin col-nums {
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      @media (min-width: $breakpoint-sm) {
+        flex: 0 0 percentage($i/12);
+      }
+    }
+  }
+}
+@include col-nums;
+
+@mixin offset-cols {
+  @for $i from 1 through ($columns - 1) {
+    .offset-#{$i} {
+      @media (min-width: $breakpoint-sm) {
+        margin-left: percentage($i/12);
+      }
+    }
+  }
+}
+@include offset-cols;
