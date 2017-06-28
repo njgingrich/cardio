@@ -1,10 +1,10 @@
 .grid {
-  flex-wrap: wrap;
   margin-bottom: 1rem;
   margin-left: -0.5rem;
   margin-right: -0.5rem;
 
   @media (min-width: $breakpoint-sm) {
+    flex-wrap: wrap;
     display: flex;
   }
 }

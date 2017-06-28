@@ -1,0 +1,22 @@
+extends components
+
+block components_content
+  section
+    h3 Cards
+    p Use a card to put content into a defined block.
+
+    h3 Base Card
+    .card
+      header.card-header
+        h4 Card Header
+      .card-body
+        p Text inside card body
+
+  section
+    h3 Card Body
+    p Inside the card, you can have content, images, or buttons.
+
+    .card
+      +img("600x300.jpg")
+      .card-body
+        p This is some text under the image.

@@ -1,19 +1,33 @@
-extends templates/base
+extends components
 
-block content
+block components_content
   h2 Typography
 
-  h3 Headings
+  section
+    h3 Headings
 
-  h1 H1 Header Text
-  h2 H2 Header Text
-  h3 H3 Header Text
-  h4 H4 Header Text
-  h5 H4 Header Text
-  h6 H6 Header Text
+    h1 H1 Header Text
+    h2 H2 Header Text
+    h3 H3 Header Text
+    h4 H4 Header Text
+    h5 H4 Header Text
+    h6 H6 Header Text
 
-  h3 Body Text
+  section
+    h3 Body Text
+    p Normal paragraph text looks like this.
 
-  h3 Sizing
+    p.lead If you like, use the lead class to give the paragraph text more emphasis.
 
-  h3 Text Styling
+  section
+    h3 Text Styling
+    p
+      s Text that has been struck through.
+    p
+      | Text with a <mark>word</mark> highlighted.
+    p
+      i Italicized text.
+    p
+      strong This text should be bold.
+    p
+      small This text is fine-print.
