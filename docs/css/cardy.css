@@ -317,6 +317,29 @@ button.xlarge {
   margin-left: 0.5rem;
   margin-right: 0.5rem; }
 
+.menu {
+  display: block;
+  padding: 0.5rem; }
+  .menu ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0; }
+    .menu ul li a {
+      display: block;
+      padding: 0.5rem 0.75rem;
+      text-decoration: none;
+      color: inherit; }
+      .menu ul li a:hover {
+        color: #3f51b5;
+        border-radius: 0.1rem;
+        background-color: #eeeeee; }
+
+.menu-header {
+  margin: 0;
+  padding: 0.5rem 0.2rem;
+  text-transform: uppercase;
+  font-weight: 400; }
+
 .primary {
   background-color: #3f51b5;
   color: #ffffff; }

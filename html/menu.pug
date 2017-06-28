@@ -1,0 +1,34 @@
+extends components
+
+block components_content
+  section
+    h3 Menus
+    p Use the menu class on content containing an unordered list to get a vertical menu.
+
+    .grid
+      .column.col-4
+        aside.menu
+          p.menu-header Heading
+          ul
+            li
+              +link("#", "Menu Item 1")
+            li
+              +link("#", "Menu Item 2")
+            li
+              +link("#", "Menu Item 3")
+          p.menu-header Heading 2
+          ul
+            li
+              +link("#", "Menu Item 4")
+            li
+              +link("#", "Menu Item 5")
+            li
+              +link("#", "Menu Item 6")
+            li
+              +link("#", "Menu Item 7")
+            li
+              +link("#", "Menu Item 8")
+
+  section
+    h3 Sticky Menu
+    p Add the sticky class to a menu to attach it so it stays inside the viewport at all times.
