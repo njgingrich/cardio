@@ -8,12 +8,13 @@ html(lang="en")
     title Cardy - Small CSS Framework
 
   body
-    nav
+    nav.navbar.primary
       ul
+        li
+          +link("index.html", "Home")
         li
           +link("components.html", "Components")
         li
           +link("layout.html", "Layout")
 
-    .container
-      block content
+    block content

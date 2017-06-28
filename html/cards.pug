@@ -6,17 +6,57 @@ block components_content
     p Use a card to put content into a defined block.
 
     h3 Base Card
-    .card
+    .card.card-fixed
       header.card-header
         h4 Card Header
       .card-body
         p Text inside card body
+
+    p Cards are fluid-width by default. By adding the card-fixed class, they are given a 400px width.
 
   section
     h3 Card Body
     p Inside the card, you can have content, images, or buttons.
 
     .card
-      +img("600x300.jpg")
+      +img("1200x400.jpg")
       .card-body
         p This is some text under the image.
+
+    .card.card-fixed
+      .card-body
+        p This is some text above the image.
+      +img("1200x400.jpg")
+
+    .card
+      header.card-header
+        h4 Card header
+      +img("1200x400.jpg")
+      .card-body
+        p This is some text below the image.
+
+  section
+    h3 Card Footer
+    p
+      | The card footer usually contains links or actions with buttons.
+      | If you want buttons to be a part of the card, use the card-buttons class.
+
+    .card.card-fixed
+      header.card-header
+        h4 Card header
+      .card-body
+        p This is some text above the image.
+      +img("1200x400.jpg")
+      .card-footer
+        button.primary Click me
+
+    .card.card-fixed
+      header.card-header
+        h4 Card header
+      .card-body
+        p This is some text above the image.
+      +img("1200x400.jpg")
+      .card-buttons
+        button Button 1
+        button Button 2
+        button.primary Button 3

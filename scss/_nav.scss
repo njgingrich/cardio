@@ -1,4 +1,23 @@
-nav ul li {
-  display: inline-block;
-  margin-right: 1rem;
+.navbar {
+  padding: 0.5rem 0;
+
+  ul {
+    margin: 0;
+    padding: 0.5rem;
+
+    li {
+      display: inline-block;
+      margin-right: 1rem;
+
+      a {
+        padding: 0.5rem;
+        text-decoration: none;
+
+        &:visited,
+        &:active {
+          color: inherit;
+        }
+      }
+    }
+  }
 }

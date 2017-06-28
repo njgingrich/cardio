@@ -1,57 +1,63 @@
-extends templates/base
+extends components
 
-block content
+block components_content
   h2 Buttons
 
-  h3 Overview
-  p Use buttons with a variety of style modifiers.
+  section
+    h3 Overview
+    p Use buttons with a variety of style modifiers.
 
-  h3 Color modifiers
-  .block
-    button Base
-    button.primary Primary
-    button.secondary Secondary
-    button.success Success
-    button.warning Warning
-    button.danger Danger
+  section
+    h3 Color modifiers
+    .block
+      button Base
+      button.primary Primary
+      button.secondary Secondary
+      button.success Success
+      button.warning Warning
+      button.danger Danger
 
-  h3 Sizing
-  .block
-    button.small Small
-    button Normal
-    button.large Large
-    button.xlarge Extra Large
+  section
+    h3 Sizing
+    .block
+      button.small Small
+      button Normal
+      button.large Large
+      button.xlarge Extra Large
 
-  h3 Outline Buttons
-  .block
-    button Normal
-    button.primary.outlined Primary
-    button.secondary.outlined Secondary
-    button.success.outlined Success
-    button.warning.outlined Warning
-    button.danger.outlined Danger
+  section
+    h3 Outline Buttons
+    .block
+      button Normal
+      button.primary.outlined Primary
+      button.secondary.outlined Secondary
+      button.success.outlined Success
+      button.warning.outlined Warning
+      button.danger.outlined Danger
 
-  h3 Disabled
-  .block
-    button(disabled) Normal
-    button(disabled).primary Primary
-    button(disabled).secondary Secondary
-    button(disabled).success  Success
-    button(disabled).warning Warning
-    button(disabled).danger Danger
-  .block
-    button(disabled) Normal
-    button(disabled).primary.outlined Primary
-    button(disabled).secondary.outlined Secondary
-    button(disabled).success.outlined Success
-    button(disabled).warning.outlined Warning
-    button(disabled).danger.outlined Danger
+  section
+    h3 Disabled
+    .block
+      button(disabled) Normal
+      button(disabled).primary Primary
+      button(disabled).secondary Secondary
+      button(disabled).success  Success
+      button(disabled).warning Warning
+      button(disabled).danger Danger
+    .block
+      button(disabled) Normal
+      button(disabled).primary.outlined Primary
+      button(disabled).secondary.outlined Secondary
+      button(disabled).success.outlined Success
+      button(disabled).warning.outlined Warning
+      button(disabled).danger.outlined Danger
 
-  h3 Button group
-  .grouped
-    button Button 1
-    button Button 2
-    button Button 3
-    button.primary Button 3
-    button(disabled).danger Button 4
-    button Button 5
+  section
+    h3 Button group
+    .grouped
+      button Button 1
+      button Button 2
+      button Button 3
+      button.primary Button 3
+      button(disabled).danger Button 4
+      button Button 5

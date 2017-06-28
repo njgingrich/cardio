@@ -4,8 +4,8 @@
   "description": "CSS library",
   "main": "index.js",
   "scripts": {
-    "dev": "sass --watch scss:out/css | pug -w html --out out",
-    "build": "sass scss:out/css && pug html --out out"
+    "dev": "sass --watch scss:docs/css | pug -w html --out docs",
+    "build": "sass scss:docs/css && pug html --out docs"
   },
   "repository": {
     "type": "git",

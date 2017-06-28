@@ -1,13 +1,20 @@
 .card {
-  width: 400px;
   background-color: $white;
   border: 1px solid rgba($gray, 0.2);
   border-radius: $base-border-radius;
   box-shadow: 0 4px 2px 0 rgba($black, 0.1);
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-fixed {
+  width: 400px;
 }
 
 .card-header {
   padding: 1rem;
+  flex-grow: 1;
   box-shadow: 0 1px 1px 0 rgba($black, 0.1);
 
   h1,
@@ -20,11 +27,39 @@
   }
 }
 
+.card img {
+  max-width: 100%;
+  align-self: center;
+  padding: 0;
+}
+
 .card-body {
+  flex-grow: 1;
   padding: 1rem;
 }
 
-.card img {
-  max-width: 100%;
-  padding: 0;
+.card-footer {
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+.card-buttons {
+  padding-top: 1rem;
+  display: flex;
+  text-align: center;
+
+  button {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    flex-basis: auto;
+    margin: 0 -1px 0 0;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border: 1px solid rgba($gray, 0.2);
+
+    &:first-child {
+      margin-left: -1px;
+    }
+  }
 }
