@@ -346,6 +346,7 @@ button.xlarge {
       display: inline-block;
       margin-right: 1rem; }
       .navbar ul li a {
+        color: inherit;
         padding: 0.5rem;
         text-decoration: none; }
         .navbar ul li a:visited, .navbar ul li a:active {
