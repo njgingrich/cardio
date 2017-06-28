@@ -13,3 +13,8 @@
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
+
+.container.flex,
+.container-fluid.flex {
+  display: flex;
+}

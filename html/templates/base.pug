@@ -17,4 +17,31 @@ html(lang="en")
         li
           +link("layout.html", "Layout")
 
-    block content
+  .container.flex.docs-container
+    .docs-content.container-fluid
+      block content
+    .docs-menu
+      aside.menu.sticky
+        p.menu-header Layout
+        ul
+          li
+            +link("container.html", "Container")
+          li
+            +link("section.html", "Section")
+        p.menu-header Components
+        ul
+          li
+            +link("buttons.html", "Buttons")
+          li
+            +link("cards.html", "Cards")
+          li
+            +link("forms.html", "Forms")
+          li
+            +link("grid.html", "Grid")
+          li
+            +link("menu.html", "Menu")
+          li
+            +link("nav.html", "Nav")
+          li
+            +link("typography.html", "Typography")
+

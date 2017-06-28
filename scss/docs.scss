@@ -8,13 +8,20 @@
   color: $white;
 }
 
+.docs-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .docs-menu {
-  order: 1;
-  @media (min-width: $breakpoint-sm) {
-    order: 3;
+  flex-basis: 200px;
+  min-width: 200px;
+
+  aside {
+    width: 200px;
   }
 }
 
 .docs-content {
-  order: 2;
+  flex: 1 1 auto;
 }

@@ -317,6 +317,10 @@ button.xlarge {
   margin-left: 0.5rem;
   margin-right: 0.5rem; }
 
+.container.flex,
+.container-fluid.flex {
+  display: flex; }
+
 .menu {
   display: block;
   padding: 0.5rem; }
@@ -324,15 +328,20 @@ button.xlarge {
     list-style: none;
     padding-left: 0;
     margin: 0; }
-    .menu ul li a {
-      display: block;
-      padding: 0.5rem 0.75rem;
-      text-decoration: none;
-      color: inherit; }
-      .menu ul li a:hover {
-        color: #3f51b5;
-        border-radius: 0.1rem;
-        background-color: #eeeeee; }
+    .menu ul li {
+      width: 100%; }
+      .menu ul li a {
+        display: block;
+        padding: 0.5rem 0.75rem;
+        text-decoration: none;
+        color: inherit; }
+        .menu ul li a:hover {
+          color: #3f51b5;
+          border-radius: 0.1rem;
+          background-color: #eeeeee; }
+
+.menu.sticky {
+  position: fixed; }
 
 .menu-header {
   margin: 0;
@@ -423,7 +432,7 @@ p {
 
 html {
   font-size: 16px;
-  font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   box-sizing: border-box; }
 
 *,

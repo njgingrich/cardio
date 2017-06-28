@@ -8,6 +8,7 @@
     margin: 0;
 
     li {
+      width: 100%;
       a {
         display: block;
         padding: 0.5rem 0.75rem;
@@ -22,6 +23,10 @@
       }
     }
   }
+}
+
+.menu.sticky {
+  position: fixed;
 }
 
 .menu-header {
