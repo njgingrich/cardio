@@ -42,12 +42,63 @@ block content
 
       .field
         label.label Example Radio Buttons
-        .radio
-          input(type="radio" name="example-radio")
-          label.label Radio 1
-        .radio
-          input(type="radio" name="example-radio")
-          label.label Radio 2
-        .radio
-          input(type="radio" name="example-radio")
-          label.label Radio 3
+        .radio-buttons
+          .radio
+            input#example-radio-1(type="radio" name="example-radio")
+            label.label(for="example-radio-1") Radio 1
+          .radio
+            input#example-radio-2(type="radio" name="example-radio")
+            label.label(for="example-radio-2") Radio 2
+          .radio
+            input#example-radio-3(type="radio" name="example-radio")
+            label.label(for="example-radio-3") Radio 3
+
+      .field
+        label.label Example Stacked Radio Buttons
+        .radio-buttons.stacked
+          .radio
+            input#example2-radio-1(type="radio" name="example2-radio")
+            label.label(for="example2-radio-1") Radio 1
+          .radio
+            input#example2-radio-2(type="radio" name="example2-radio")
+            label.label(for="example2-radio-2") Radio 2
+          .radio
+            input#example2-radio-3(type="radio" name="example2-radio")
+            label.label(for="example2-radio-3") Radio 3
+
+      .field
+        label.label Example Textarea
+        textarea
+
+  section
+    h3 Disabled
+
+    form
+      .field
+        label.label Disabled Input
+        input(disabled).input
+
+      .field
+        label.label Disabled Select
+        .select
+          select(disabled)
+            option Option 1
+
+      .field
+        label.label Disabled Checkboxes
+        .checkbox
+          input(type="checkbox" disabled)
+          label.label Check 1
+        .checkbox
+          input(type="checkbox" disabled)
+          label.label Check 2
+
+      .field
+        label.label Disabled Radio Buttons
+        .radio-buttons
+          .radio
+            input#example3-radio-1(type="radio" name="example3-radio" disabled)
+            label.label(for="example3-radio-1") Radio 1
+          .radio
+            input#example3-radio-2(type="radio" name="example3-radio" disabled)
+            label.label(for="example3-radio-2") Radio 2
