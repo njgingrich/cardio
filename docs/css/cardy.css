@@ -314,6 +314,40 @@ form {
     .field-inline .radio-buttons .radio::after {
       margin-top: -5px; }
 
+.field.attached .input,
+.field.attached .select,
+.field.attached .checkbox,
+.field.attached .radio-buttons,
+.field.attached button,
+.field-inline.attached .input,
+.field-inline.attached .select,
+.field-inline.attached .checkbox,
+.field-inline.attached .radio-buttons,
+.field-inline.attached button {
+  border-radius: 0;
+  margin: 0; }
+.field.attached button,
+.field-inline.attached button {
+  box-shadow: none; }
+.field.attached:first-child button
+.field.attached:first-child .input,
+.field-inline.attached:first-child button
+.field.attached:first-child .input, .field.attached:first-child button
+.field-inline.attached:first-child .input,
+.field-inline.attached:first-child button
+.field-inline.attached:first-child .input {
+  border-top-left-radius: 0.1rem;
+  border-bottom-left-radius: 0.1rem; }
+.field.attached:last-child button, .field.attached:last-child .input,
+.field-inline.attached:last-child button,
+.field-inline.attached:last-child .input {
+  border-top-right-radius: 0.1rem;
+  border-bottom-right-radius: 0.1rem; }
+.field.attached input,
+.field-inline.attached input {
+  align-self: stretch;
+  height: auto; }
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;

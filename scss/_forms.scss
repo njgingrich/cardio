@@ -119,6 +119,39 @@ $colorMap: (
   }
 }
 
+.field.attached,
+.field-inline.attached {
+  .input,
+  .select,
+  .checkbox,
+  .radio-buttons,
+  button {
+    border-radius: 0;
+    margin: 0;
+  }
+
+  button {
+    box-shadow: none;
+  }
+
+  &:first-child button
+  &:first-child .input {
+    border-top-left-radius: $base-border-radius;
+    border-bottom-left-radius: $base-border-radius;
+  }
+
+  &:last-child button,
+  &:last-child .input {
+    border-top-right-radius: $base-border-radius;
+    border-bottom-right-radius: $base-border-radius;
+  }
+
+  input {
+    align-self: stretch;
+    height: auto;
+  }
+}
+
 select {
   -webkit-appearance: none;
      -moz-appearance: none;
