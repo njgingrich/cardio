@@ -176,36 +176,70 @@ button.xlarge {
 form {
   display: flex;
   flex-direction: column; }
-  form .label {
-    display: block;
-    flex-grow: 1;
-    margin-bottom: 0.5rem;
-    font-weight: 500; }
-  form .input {
-    display: block;
-    flex: 1 0 auto;
-    width: 100%;
-    height: 2rem;
-    font-size: 16px;
-    margin: 0;
-    padding: 0.2rem 0.4rem;
-    border: 1px solid #cdcdcd;
-    border-radius: 0.1rem;
-    transition: 200ms all ease-in-out; }
-    form .input:hover {
-      box-shadow: 0 0 2px #3f51b5; }
-    form .input:focus {
-      border: 1px solid #3f51b5;
-      outline: none; }
-    form .input[disabled] {
-      cursor: not-allowed; }
-      form .input[disabled]:hover {
-        box-shadow: none; }
+
+.label {
+  display: block;
+  flex-grow: 1;
+  margin-bottom: 0.5rem;
+  font-weight: 500; }
+
+.input {
+  display: block;
+  flex: 1 0 auto;
+  width: 100%;
+  height: 2rem;
+  font-size: 16px;
+  margin: 0;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid #cdcdcd;
+  border-radius: 0.1rem;
+  transition: 200ms all ease-in-out; }
+  .input:hover {
+    box-shadow: 0 0 2px #3f51b5; }
+  .input:focus {
+    border: 1px solid #3f51b5;
+    outline: none; }
+  .input[disabled] {
+    cursor: not-allowed; }
+    .input[disabled]:hover {
+      box-shadow: none; }
 
 .field {
   padding: 0.75rem;
   display: flex;
   flex-direction: column; }
+  .field.primary {
+    background-color: inherit;
+    color: #32408f; }
+    .field.primary input {
+      border-color: #3f51b5;
+      background-color: rgba(63, 81, 181, 0.05); }
+      .field.primary input:hover {
+        box-shadow: 0 0 2px #3f51b5; }
+  .field.success {
+    background-color: inherit;
+    color: #167700; }
+    .field.success input {
+      border-color: #1faa00;
+      background-color: rgba(31, 170, 0, 0.05); }
+      .field.success input:hover {
+        box-shadow: 0 0 2px #1faa00; }
+  .field.warning {
+    background-color: inherit;
+    color: #fdce03; }
+    .field.warning input {
+      border-color: #fdd835;
+      background-color: rgba(253, 216, 53, 0.05); }
+      .field.warning input:hover {
+        box-shadow: 0 0 2px #fdd835; }
+  .field.danger {
+    background-color: inherit;
+    color: #ab2424; }
+    .field.danger input {
+      border-color: #d32f2f;
+      background-color: rgba(211, 47, 47, 0.05); }
+      .field.danger input:hover {
+        box-shadow: 0 0 2px #d32f2f; }
 
 select {
   -webkit-appearance: none;
