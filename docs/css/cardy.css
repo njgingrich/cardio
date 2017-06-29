@@ -181,12 +181,11 @@ form {
   display: block;
   flex-grow: 1;
   margin-bottom: 0.5rem;
-  font-weight: 500; }
+  font-weight: 600; }
 
 .input {
   display: block;
   flex: 1 0 auto;
-  width: 100%;
   height: 2rem;
   font-size: 16px;
   margin: 0;
@@ -204,6 +203,14 @@ form {
     .input[disabled]:hover {
       box-shadow: none; }
 
+.helper {
+  padding: 0.5rem 0; }
+
+.validation {
+  padding: 0.75rem 0 0.5rem 0; }
+  .validation ~ .helper {
+    padding-top: 0; }
+
 .field {
   padding: 0.75rem;
   display: flex;
@@ -216,6 +223,8 @@ form {
       background-color: rgba(63, 81, 181, 0.05); }
       .field.primary input:hover {
         box-shadow: 0 0 2px #3f51b5; }
+    .field.primary .helper {
+      color: initial; }
   .field.success {
     background-color: inherit;
     color: #167700; }
@@ -224,6 +233,8 @@ form {
       background-color: rgba(31, 170, 0, 0.05); }
       .field.success input:hover {
         box-shadow: 0 0 2px #1faa00; }
+    .field.success .helper {
+      color: initial; }
   .field.warning {
     background-color: inherit;
     color: #fdce03; }
@@ -232,6 +243,8 @@ form {
       background-color: rgba(253, 216, 53, 0.05); }
       .field.warning input:hover {
         box-shadow: 0 0 2px #fdd835; }
+    .field.warning .helper {
+      color: initial; }
   .field.danger {
     background-color: inherit;
     color: #ab2424; }
@@ -240,6 +253,66 @@ form {
       background-color: rgba(211, 47, 47, 0.05); }
       .field.danger input:hover {
         box-shadow: 0 0 2px #d32f2f; }
+    .field.danger .helper {
+      color: initial; }
+
+.field-inline {
+  padding: 0.75rem;
+  margin-right: -1rem;
+  display: flex;
+  align-items: center; }
+  .field-inline.primary {
+    background-color: inherit;
+    color: #32408f; }
+    .field-inline.primary input {
+      border-color: #3f51b5;
+      background-color: rgba(63, 81, 181, 0.05); }
+      .field-inline.primary input:hover {
+        box-shadow: 0 0 2px #3f51b5; }
+    .field-inline.primary .helper {
+      color: initial; }
+  .field-inline.success {
+    background-color: inherit;
+    color: #167700; }
+    .field-inline.success input {
+      border-color: #1faa00;
+      background-color: rgba(31, 170, 0, 0.05); }
+      .field-inline.success input:hover {
+        box-shadow: 0 0 2px #1faa00; }
+    .field-inline.success .helper {
+      color: initial; }
+  .field-inline.warning {
+    background-color: inherit;
+    color: #fdce03; }
+    .field-inline.warning input {
+      border-color: #fdd835;
+      background-color: rgba(253, 216, 53, 0.05); }
+      .field-inline.warning input:hover {
+        box-shadow: 0 0 2px #fdd835; }
+    .field-inline.warning .helper {
+      color: initial; }
+  .field-inline.danger {
+    background-color: inherit;
+    color: #ab2424; }
+    .field-inline.danger input {
+      border-color: #d32f2f;
+      background-color: rgba(211, 47, 47, 0.05); }
+      .field-inline.danger input:hover {
+        box-shadow: 0 0 2px #d32f2f; }
+    .field-inline.danger .helper {
+      color: initial; }
+  .field-inline .input,
+  .field-inline .select,
+  .field-inline .checkbox,
+  .field-inline .radio-buttons,
+  .field-inline button {
+    margin-right: 1rem; }
+  .field-inline .checkbox,
+  .field-inline .radio-buttons .radio {
+    padding-bottom: 0; }
+    .field-inline .checkbox::after,
+    .field-inline .radio-buttons .radio::after {
+      margin-top: -5px; }
 
 select {
   -webkit-appearance: none;
@@ -318,7 +391,8 @@ select {
   .checkbox .label {
     display: inline-flex;
     margin-bottom: 0;
-    margin-left: 0.5rem; }
+    margin-left: 0.5rem;
+    font-weight: normal; }
   .checkbox::after {
     position: absolute;
     border: 2px solid #ffffff;
@@ -381,7 +455,8 @@ select {
   .radio .label {
     display: inline-flex;
     margin-bottom: 0;
-    margin-left: 0.5rem; }
+    margin-left: 0.5rem;
+    font-weight: normal; }
   .radio::after {
     position: absolute;
     background-color: #ffffff;

@@ -12,6 +12,7 @@ block content
       .field
         label.label Example Input
         input.input
+        small.helper Helper text to aid in filling in the form input.
 
       .field
         label.label Example Password
@@ -116,9 +117,51 @@ block content
       .field.success
         label.label Success Input
         input.input
+        .validation Validation text!
+        small.helper The helper text is unchanged.
       .field.warning
         label.label Warning Input
         input.input
+        .validation Validation text!
       .field.danger
         label.label Danger Input
         input.input
+        .validation Validation text!
+
+  section
+    h3 Form Groups
+    p Put form elements inline by using the field-inline class.
+
+    form
+      .field-inline.columns
+        label.label.col-3 Example Input
+        input.input
+
+      .field-inline.columns
+        label.label.col-3 Example Password
+        input.input(type="password")
+
+      .field-inline
+        .select
+          select
+            option Option 1
+            option Option 2
+            option Option 3
+
+        .checkbox
+          input(type="checkbox")
+          label.label Check 1
+
+        .radio-buttons
+          .radio
+            input#example4-radio-1(type="radio" name="example4-radio")
+            label.label(for="example4-radio-1") Radio 1
+          .radio
+            input#example4-radio-2(type="radio" name="example4-radio")
+            label.label(for="example4-radio-2") Radio 2
+
+        input.input(type="password")
+        button.primary Submit
+
+  section
+    h3 Attaching
