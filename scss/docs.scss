@@ -10,11 +10,11 @@
 
 .docs-container {
   display: flex;
-  justify-content: space-between;
 }
 
 .docs-menu {
-  flex-basis: 200px;
+  flex: 0 1 200px;
+  max-width: 200px;
   min-width: 200px;
 
   aside {
@@ -23,5 +23,9 @@
 }
 
 .docs-content {
-  flex: 1 1 auto;
+  flex: 4 1 auto;
+}
+
+.hero {
+  height: 140px;
 }

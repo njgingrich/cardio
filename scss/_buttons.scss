@@ -8,7 +8,7 @@ button {
   border: 1px solid $gray-light;
   border-radius: $base-border-radius;;
   box-shadow: 0 2px 2px 0 rgba($gray-light, 0.75);
-  transition: all 200ms ease-in-out;
+  transition: all $base-transition-time ease-in-out;
   background-color: $white;
 
   &[disabled] {

@@ -1,4 +1,53 @@
 extends templates/base
 
 block content
-  h3 Forms
+  h2 Forms
+  section
+    h3 Form helpers
+    p
+      | By default, form items will take up 100% width of their container.
+      | Each set of fields should be wrapped in a field div.
+
+    form
+      .field
+        label.label Example Input
+        input.input
+
+      .field
+        label.label Example Password
+        input.input(type="password")
+
+      .field
+        label.label Example Dropdown
+        .select
+          select
+            option Option 1
+            option Option 2
+            option Option 3
+
+      .field
+        label.label Example Checkboxes
+        .checkbox
+          input(type="checkbox")
+          label.label Check 1
+        .checkbox
+          input(type="checkbox")
+          label.label Check 2
+        .checkbox
+          input(type="checkbox")
+          label.label Check 3
+        .checkbox
+          input(type="checkbox")
+          label.label Check 4
+
+      .field
+        label.label Example Radio Buttons
+        .radio
+          input(type="radio" name="example-radio")
+          label.label Radio 1
+        .radio
+          input(type="radio" name="example-radio")
+          label.label Radio 2
+        .radio
+          input(type="radio" name="example-radio")
+          label.label Radio 3
