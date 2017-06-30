@@ -9,55 +9,117 @@ block content
 
   section
     h3 Color modifiers
-    .block
-      button Base
-      button.primary Primary
-      button.secondary Secondary
-      button.success Success
-      button.warning Warning
-      button.danger Danger
+    p The available colors are #[+code("primary")], #[+code("secondary")], #[+code("success")], #[+code("warning")], and #[+code("danger")].
+    .column
+        button Base
+        button.primary Primary
+        button.secondary Secondary
+        button.success Success
+        button.warning Warning
+        button.danger Danger
+    .column
+      +code_block(`
+        <button>Base</button>
+        <button class="primary">Primary</button>
+        <button class="secondary">Secondary</button>
+        <button class="success">Success</button>
+        <button class="warning">Warning</button>
+        <button class="danger">Danger</button>
+      `, 'html')
 
   section
     h3 Sizing
-    .block
-      button.small Small
-      button Normal
-      button.large Large
-      button.xlarge Extra Large
+    p Sizing can be done with the #[+code("small")], #[+code("large")], or #[+code("xlarge")] classes.
+    .column
+        button.small Small
+        button Normal
+        button.large Large
+        button.xlarge Extra Large
+    .column
+      +code_block(`
+        <button class="small">Small</button>
+        <button>Normal</button>
+        <button class="large">Large</button>
+        <button class="xlarge">Extra Large</button>
+      `, 'html')
 
   section
     h3 Outline Buttons
-    .block
-      button Normal
-      button.primary.outlined Primary
-      button.secondary.outlined Secondary
-      button.success.outlined Success
-      button.warning.outlined Warning
-      button.danger.outlined Danger
+    p If you want a less imposing button, you can add the #[+code("outlined")] class to a button.
+    .column
+        button Normal
+        button.primary.outlined Primary
+        button.secondary.outlined Secondary
+        button.success.outlined Success
+        button.warning.outlined Warning
+        button.danger.outlined Danger
+    .column
+      +code_block(`
+        <button>Normal</button>
+        <button class="primary outlined">Primary</button>
+        <button class="secondary outlined">Secondary</button>
+        <button class="success outlined">Success</button>
+        <button class="warning outlined">Warning</button>
+        <button class="danger outlined">Danger</button>
+      `, 'html')
 
   section
     h3 Disabled
-    .block
-      button(disabled) Normal
-      button(disabled).primary Primary
-      button(disabled).secondary Secondary
-      button(disabled).success  Success
-      button(disabled).warning Warning
-      button(disabled).danger Danger
-    .block
-      button(disabled) Normal
-      button(disabled).primary.outlined Primary
-      button(disabled).secondary.outlined Secondary
-      button(disabled).success.outlined Success
-      button(disabled).warning.outlined Warning
-      button(disabled).danger.outlined Danger
+    p Disabling an element should be done by attributes, not with a disabled class. This is how #[+code("button[disabled]")] buttons look.
+    .column
+        button(disabled) Normal
+        button(disabled).primary Primary
+        button(disabled).secondary Secondary
+        button(disabled).success  Success
+        button(disabled).warning Warning
+        button(disabled).danger Danger
+    .column
+      +code_block(`
+        <button>Base</button>
+        <button class="primary" disabled>Primary</button>
+        <button class="secondary" disabled>Secondary</button>
+        <button class="success" disabled>Success</button>
+        <button class="warning" disabled>Warning</button>
+        <button class="danger" disabled>Danger</button>
+      `, 'html')
+    .column
+        button(disabled) Normal
+        button(disabled).primary.outlined Primary
+        button(disabled).secondary.outlined Secondary
+        button(disabled).success.outlined Success
+        button(disabled).warning.outlined Warning
+        button(disabled).danger.outlined Danger
+    .column
+      +code_block(`
+        <button>Base</button>
+        <button class="primary outlined" disabled>Primary</button>
+        <button class="secondary outlined" disabled>Secondary</button>
+        <button class="success outlined" disabled>Success</button>
+        <button class="warning outlined" disabled>Warning</button>
+        <button class="danger outlined" disabled>Danger</button>
+      `, 'html')
 
   section
     h3 Button group
-    .grouped
-      button Button 1
-      button Button 2
-      button Button 3
-      button.primary Button 3
-      button(disabled).danger Button 4
-      button Button 5
+    p
+      | You can group buttons together so they appear as a larger unit by nesting them in a #[+code("grouped")] class.
+      | You can use any other styles you want on the buttons in combination.
+    .column
+      .grouped
+        button Button 1
+        button Button 2
+        button Button 3
+        button.primary Button 4
+        button(disabled).danger Button 5
+        button Button 6
+    .column
+      +code_block(`
+        <div class="grouped">
+          <button>Button 1</button>
+          <button>Button 2</button>
+          <button>Button 3</button>
+          <button class="primary">Button 4</button>
+          <button class="danger" disabled>Button 5</button>
+          <button>Button 6</button>
+        </div>
+      `, 'html')

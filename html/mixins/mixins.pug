@@ -3,3 +3,24 @@ mixin link(href, name)
 
 mixin img(src)
   img(src="img/"+src)
+
+mixin code(html)
+  <code>#{html}</code>
+
+mixin code_block(html, lang)
+  -
+    var dedent
+    stripIndent = function(text) {
+      console.log('stripping')
+      var lines = text.split(/(?:\r\n|\n|\r)/);
+      var whitespace_count = text.search(/\S|$/)
+
+      // Rip out the leading whitespace.
+      return lines.map(function(line) {
+        return line.slice(whitespace_count-1)
+      }).join('\n').trim();
+    }
+    dedent = stripIndent(html)
+    console.log('dedent:', dedent)
+
+  <pre><code class=#{lang}>#{dedent}</code></pre>

@@ -117,10 +117,17 @@ $colorMap: (
       margin-top: -5px;
     }
   }
+
+  label {
+    margin: 0;
+  }
 }
 
-.field.attached,
-.field-inline.attached {
+.attached {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+
   .input,
   .select,
   .checkbox,
@@ -131,17 +138,18 @@ $colorMap: (
   }
 
   button {
+    margin-left: -1px;
     box-shadow: none;
   }
 
-  &:first-child button
-  &:first-child .input {
+  button:first-child,
+  input:first-child {
     border-top-left-radius: $base-border-radius;
     border-bottom-left-radius: $base-border-radius;
   }
 
-  &:last-child button,
-  &:last-child .input {
+  button:last-child,
+  input:last-child {
     border-top-right-radius: $base-border-radius;
     border-bottom-right-radius: $base-border-radius;
   }

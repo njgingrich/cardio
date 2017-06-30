@@ -6,12 +6,26 @@ block content
     h3 Basic
     p Use a card to put content into a defined block.
 
-    h3 Base Card
-    .card.card-fixed
-      header.card-header
-        h4 Card Header
-      .card-body
-        p Text inside card body
+    .grid
+      .column.col-4
+        h3 Base Card
+        .card.card-fixed
+          header.card-header
+            h4 Card Header
+          .card-body
+            p Text inside card body
+      .column
+        +code_block(`
+          <h3>Base Card</h3>
+          <div class="card card-fixed">
+            <header class="card-header">
+              <h4>Card Header</h4>
+            </header>
+            <div class="card-body">
+              <p>Text inside card body</p>
+            </div>
+          </div>
+        `)
 
     p Cards are fluid-width by default. By adding the card-fixed class, they are given a 400px width.
 

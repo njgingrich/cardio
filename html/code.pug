@@ -1,0 +1,22 @@
+extends templates/base
+
+block content
+  h2 Code Styling
+  section
+    h3 Inline Code
+    p All across the page you can see code wrapped within #[+code("<code>")] tags.
+
+  section
+    h3 Code Block
+    p
+      | Examples for code use code blocks, which are pre tags wrapped in code tags.
+      | The blocks use #[+link("https://highlightjs.org/", "highlight.js")] to highlight the code.
+
+    +code_block(`
+      code {
+        color: $color-primary-light;
+        background-color: lighten($gray-light, 10%);
+        border-radius: $base-border-radius;
+        padding: 0.2rem 0.3rem;
+      }
+    `)

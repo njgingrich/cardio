@@ -168,7 +168,12 @@ block content
     p Attach buttons to an input by using the attached class on a field.
 
     form
-      .field-inline.attached.columns
+      .field-inline
         label.label.col-2 Username
+        .attached
+          input.input
+          button Check Availability
+      .field-inline.attached
+        button.success Button
         input.input
-        button Check Availability
+        button Button 2

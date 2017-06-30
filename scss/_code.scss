@@ -1,0 +1,16 @@
+code {
+  color: $color-primary-light;
+  background-color: lighten($gray-light, 10%);
+  border-radius: $base-border-radius;
+  padding: 0.2rem 0.3rem;
+  white-space: nowrap;
+}
+
+pre {
+  margin: 0;
+
+  code {
+    white-space: inherit;
+    font-family: $mono-font-family;
+  }
+}

@@ -15,6 +15,24 @@
     width: 200px; }
 
 .docs-content {
-  flex: 4 1 auto; }
+  flex: 4 1 auto;
+  padding: 1rem; }
+
+html {
+  height: 100%;
+  background-color: #cdcdcd; }
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column; }
+
+.content {
+  flex: 1 0 auto;
+  background-color: #ffffff; }
+
+footer {
+  height: 40px;
+  background-color: #3f51b5; }
 
 /*# sourceMappingURL=docs.css.map */

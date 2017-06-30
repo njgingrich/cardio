@@ -3,6 +3,7 @@
 
 @import "buttons";
 @import "cards";
+@import "code";
 @import "content";
 @import "forms";
 @import "grid";
@@ -14,8 +15,8 @@
 @import "typography";
 
 html {
-  font-size: 16px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 18px;
+  font-family: $base-font-family;
   box-sizing: border-box;
   // Avoid resizing content due to scrollbar
   overflow-x: hidden;
@@ -30,4 +31,8 @@ html {
 
 body {
   margin: 0;
+}
+
+p {
+  line-height: 1.6;
 }
