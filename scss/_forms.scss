@@ -51,13 +51,6 @@ form {
   }
 }
 
-$colorMap: (
-  "primary": $color-primary,
-  "success": $color-success,
-  "warning": $color-warning,
-  "danger": $color-danger
-);
-
 @mixin field-modifier($modifier) {
   $color: map-get($colorMap, $modifier);
   &.#{$modifier} {

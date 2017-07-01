@@ -15,3 +15,21 @@ $gray-light: #cdcdcd;
 $gray: #757575;
 $gray-dark: #212121;
 $black: #000000;
+
+// Map modifier string to its color
+$colorMap: (
+  "primary": $color-primary,
+  "secondary": $gray-light,
+  "success": $color-success,
+  "warning": $color-warning,
+  "danger": $color-danger
+);
+
+// Map a modifier's background color to its text color
+$modifierColorMap: (
+  "primary": $white,
+  "secondary": $gray-dark,
+  "success": $white,
+  "warning": $white,
+  "danger": $white
+);

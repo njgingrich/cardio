@@ -913,26 +913,44 @@ textarea {
   color: #ffffff; }
 
 .navbar {
-  padding: 0.5rem 0;
   display: flex;
   align-items: center; }
   .navbar ul {
-    margin: 0;
-    padding: 0.5rem; }
+    margin: 0; }
     .navbar ul li {
       display: inline-block;
-      padding: 0 0.5rem; }
+      padding: 0.75rem 0.5rem; }
       .navbar ul li a {
         color: inherit;
-        padding: 0.5rem;
+        padding: 0.75rem 0.5rem 0.75rem 0.5rem;
         text-decoration: none; }
         .navbar ul li a:visited, .navbar ul li a:active {
           color: inherit; }
+        .navbar ul li a.active {
+          font-weight: bold;
+          padding-bottom: 0.55rem;
+          border-bottom: 0.2rem solid #ffffff; }
     .navbar ul.right {
       margin-left: auto; }
   .navbar.primary {
     background-color: #3f51b5; }
     .navbar.primary ul li a:hover {
+      color: #e6e6e6; }
+  .navbar.secondary {
+    background-color: #cdcdcd; }
+    .navbar.secondary ul li a:hover {
+      color: #080808; }
+  .navbar.success {
+    background-color: #1faa00; }
+    .navbar.success ul li a:hover {
+      color: #e6e6e6; }
+  .navbar.warning {
+    background-color: #fdd835; }
+    .navbar.warning ul li a:hover {
+      color: #e6e6e6; }
+  .navbar.danger {
+    background-color: #d32f2f; }
+    .navbar.danger ul li a:hover {
       color: #e6e6e6; }
   .navbar .field-inline {
     padding: 0;
