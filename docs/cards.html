@@ -1,10 +1,51 @@
-<!DOCTYPE html><html lang="en"><head><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Libre+Baskerville|Source+Code+Pro"><link rel="stylesheet" href="css/cardy.css"><link rel="stylesheet" href="css/docs.css"><title>Cardy - Small CSS Framework</title></head><body><div class="content"><div class="hero primary"><h1>Cardy</h1><h4>A simple but opinionated CSS framework</h4></div><div class="container flex docs-container"><div class="docs-content"><h2>Cards</h2><section><h3>Basic</h3><p>Use a card to put content into a defined block.</p><div class="grid"><div class="column col-4"><h3>Base Card</h3><div class="card card-fixed"><header class="card-header"><h4>Card Header</h4></header><div class="card-body"><p>Text inside card body</p></div></div></div><div class="column"><pre><code class=>&lt;h3&gt;Base Card&lt;/h3&gt;
-&lt;div class=&quot;card card-fixed&quot;&gt;
+<!DOCTYPE html><html lang="en"><head><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato|Libre+Baskerville|Source+Code+Pro"><link rel="stylesheet" href="css/cardy.css"><link rel="stylesheet" href="css/docs.css"><title>Cardy - Small CSS Framework</title></head><body><div class="content"><div class="hero primary"><h1>Cardy</h1><h4>A simple but opinionated CSS framework</h4></div><div class="container docs-container grid"><div class="docs-content column"><h2>Cards</h2><section><h3>Base Card</h3><p>Use a card to put content into a defined block.</p><div class="grid"><div class="half"><div class="card card-fixed"><header class="card-header"><h4>Card Header</h4></header><div class="card-body"><p>Text inside card body</p></div></div></div><div class="half"><pre><code class=>&lt;div class=&quot;card card-fixed&quot;&gt;
   &lt;header class=&quot;card-header&quot;&gt;
     &lt;h4&gt;Card Header&lt;/h4&gt;
   &lt;/header&gt;
   &lt;div class=&quot;card-body&quot;&gt;
     &lt;p&gt;Text inside card body&lt;/p&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre></div></div><p>Cards are fluid-width by default. By adding the card-fixed class, they are given a 400px width.</p></section><section><h3>Card Body</h3><p>Inside the card, you can have content, images, or buttons.</p><div class="card"><img src="img/1200x400.jpg"/><div class="card-body"><p>This is some text under the image.</p></div></div><div class="card card-fixed"><div class="card-body"><p>This is some text above the image.</p></div><img src="img/1200x400.jpg"/></div><div class="card"><header class="card-header"><h4>Card header</h4></header><img src="img/1200x400.jpg"/><div class="card-body"><p>This is some text below the image.</p></div></div></section><section><h3>Card Footer</h3><p>The card footer usually contains links or actions with buttons.
-If you want buttons to be a part of the card, use the card-buttons class.</p><div class="card card-fixed"><header class="card-header"><h4>Card header</h4></header><div class="card-body"><p>This is some text above the image.</p></div><img src="img/1200x400.jpg"/><div class="card-footer"><button class="primary">Click me</button></div></div><div class="card card-fixed"><header class="card-header"><h4>Card header</h4></header><div class="card-body"><p>This is some text above the image.</p></div><img src="img/1200x400.jpg"/><div class="card-buttons"><button>Button 1</button><button>Button 2</button><button class="primary">Button 3</button></div></div></section></div><div class="docs-menu"><aside class="menu sticky"><p class="menu-header">Layout</p><ul><li><a href="container.html">Container</a></li><li><a href="section.html">Section</a></li></ul><p class="menu-header">Components</p><ul><li><a href="buttons.html">Buttons</a></li><li><a href="cards.html">Cards</a></li><li><a href="code.html">Code</a></li><li><a href="forms.html">Forms</a></li><li><a href="grid.html">Grid</a></li><li><a href="menu.html">Menu</a></li><li><a href="nav.html">Nav</a></li><li><a href="typography.html">Typography</a></li></ul></aside></div></div></div><footer></footer></body></html><script>hljs.initHighlightingOnLoad();</script>
+&lt;/div&gt;</code></pre></div></div><p>Cards are fluid-width by default. By adding the card-fixed class, they are given a 400px width.</p></section><section><h3>Card Body</h3><p>Inside the card, you can have content, images, or buttons.</p><div class="grid"><div class="column col-6"><div class="card"><img src="img/1200x400.jpg"/><div class="card-body"><p>This is some text under the image.</p></div></div></div><div class="column col-6"><pre><code class=>&lt;div class=&quot;card&quot;&gt;
+  &lt;img src=&quot;img/1200x400.jpg&quot;&gt;
+  &lt;div class=&quot;card-body&quot;&gt;
+    &lt;p&gt;This is some text under the image.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div></div><div class="grid"><div class="column col-6"><div class="card card-fixed"><div class="card-body"><p>This is some text above the image.</p></div><img src="img/1200x400.jpg"/></div></div><div class="column col-6"><pre><code class=>&lt;div class=&quot;card card-fixed&quot;&gt;
+  &lt;div class=&quot;card-body&quot;&gt;
+    &lt;p&gt;This is some text above the image.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;img src=&quot;img/1200x400.jpg&quot;&gt;
+&lt;/div&gt;</code></pre></div></div><div class="grid"><div class="column col-6"><div class="card"><header class="card-header"><h4>Card header</h4></header><img src="img/1200x400.jpg"/><div class="card-body"><p>This is some text below the image.</p></div></div></div><div class="column col-6"><pre><code class=>&lt;div class=&quot;card&quot;&gt;
+  &lt;header class=&quot;card-header&quot;&gt;
+    &lt;h4&gt;Card header&lt;/h4&gt;
+  &lt;/header&gt;
+  &lt;img src=&quot;img/1200x400.jpg&quot;&gt;
+  &lt;div class=&quot;card-body&quot;&gt;
+    &lt;p&gt;This is some text below the image.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div></div></section><section><h3>Card Footer</h3><p>The card footer usually contains links or actions with buttons.
+If you want buttons to be a part of the card, use the card-buttons class.</p><div class="grid"><div class="half"><div class="card card-fixed"><header class="card-header"><h4>Card header</h4></header><div class="card-body"><p>This is some text above the image.</p></div><img src="img/1200x400.jpg"/><div class="card-footer"><button class="primary">Click me</button></div></div></div><div class="half"><pre><code class=>&lt;div class=&quot;card card-fixed&quot;&gt;
+  &lt;header class=&quot;card-header&quot;&gt;
+    &lt;h4&gt;Card header&lt;/h4&gt;
+  &lt;/header&gt;
+  &lt;div class=&quot;card-body&quot;&gt;
+    &lt;p&gt;This is some text above the image.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;img src=&quot;img/1200x400.jpg&quot;&gt;
+  &lt;div class=&quot;card-footer&quot;&gt;
+    &lt;button class=&quot;primary&quot;&gt;Click me&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div></div><div class="grid"><div class="half"><div class="card card-fixed"><header class="card-header"><h4>Card header</h4></header><div class="card-body"><p>This is some text above the image.</p></div><img src="img/1200x400.jpg"/><div class="card-buttons"><button>Button 1</button><button>Button 2</button><button class="primary">Button 3</button></div></div></div><div class="half"><pre><code class=>&lt;div class=&quot;card card-fixed&quot;&gt;
+  &lt;header class=&quot;card-header&quot;&gt;
+    &lt;h4&gt;Card header&lt;/h4&gt;
+  &lt;/header&gt;
+  &lt;div class=&quot;card-body&quot;&gt;
+    &lt;p&gt;This is some text above the image.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;img src=&quot;img/1200x400.jpg&quot;&gt;
+  &lt;div class=&quot;card-buttons&quot;&gt;
+    &lt;button&gt;Button 1&lt;/button&gt;
+    &lt;button&gt;Button 2&lt;/button&gt;
+    &lt;button class=&quot;primary&quot;&gt;Button 3&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre></div></div></section></div><div class="docs-menu col-2"><aside class="menu sticky"><p class="menu-header">Layout</p><ul><li><a href="container.html">Container</a></li><li><a href="section.html">Section</a></li></ul><p class="menu-header">Components</p><ul><li><a href="buttons.html">Buttons</a></li><li><a href="cards.html">Cards</a></li><li><a href="code.html">Code</a></li><li><a href="forms.html">Forms</a></li><li><a href="grid.html">Grid</a></li><li><a href="menu.html">Menu</a></li><li><a href="nav.html">Nav</a></li><li><a href="typography.html">Typography</a></li></ul></aside></div></div></div><footer></footer></body></html><script>hljs.initHighlightingOnLoad();</script>

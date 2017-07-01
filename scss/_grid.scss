@@ -1,18 +1,19 @@
 .grid {
+  display: flex;
+  flex-direction: column;
   margin-bottom: 1rem;
   margin-left: -0.5rem;
   margin-right: -0.5rem;
 
   @media (min-width: $breakpoint-sm) {
-    flex-wrap: wrap;
-    display: flex;
+    flex-direction: row;
   }
 }
 
-.column {
+@mixin column {
   display: block;
-  flex: 1 1 0;
-  padding: 0.5rem;
+  flex: 1 1 auto;
+  padding: 0.3rem;
 
   @media (min-width: $breakpoint-sm) {
     flex-basis: auto;
@@ -23,36 +24,48 @@
   }
 }
 
+.column {
+  @include column;
+}
+
 .half {
   @media (min-width: $breakpoint-sm) {
-    flex: 0 0 50%;
-    max-width: 50%;
-    overflow: hidden;
+    flex: none;
+    width: 50%;
   }
+  @include column;
 }
 
 .one-third {
   @media (min-width: $breakpoint-sm) {
-    flex: 0 0 33.333%;
+    flex: none;
+    width: 33.333%;
   }
+  @include column;
 }
 
 .two-thirds {
   @media (min-width: $breakpoint-sm) {
-    flex: 0 0 66.666%;
+    flex: none;
+    width: 66.666%;
   }
+  @include column;
 }
 
 .one-fourth {
   @media (min-width: $breakpoint-sm) {
-    flex: 0 0 25%;
+    flex: none;
+    width: 25%;
   }
+  @include column;
 }
 
 .three-fourths {
   @media (min-width: $breakpoint-sm) {
-    flex: 0 0 75%;
+    flex: none;
+    width: 75%;
   }
+  @include column;
 }
 
 $columns: 12;
@@ -60,8 +73,10 @@ $columns: 12;
   @for $i from 1 through $columns {
     .col-#{$i} {
       @media (min-width: $breakpoint-sm) {
-        flex: 0 0 percentage($i/12);
+        flex: none;
+        width: percentage($i/12);
       }
+      @include column;
     }
   }
 }

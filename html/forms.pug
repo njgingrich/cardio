@@ -6,174 +6,383 @@ block content
     h3 Form helpers
     p
       | By default, form items will take up 100% width of their container.
-      | Each set of fields should be wrapped in a field div.
+      | Each grouping of fields should be wrapped in a #[+code("field")] div.
+    .column
+      form
+        .field
+          label.label Example Input
+          input.input
+          small.helper Helper text to aid in filling in the form input.
 
-    form
-      .field
-        label.label Example Input
-        input.input
-        small.helper Helper text to aid in filling in the form input.
+        .field
+          label.label Example Password
+          input.input(type="password")
 
-      .field
-        label.label Example Password
-        input.input(type="password")
+        .field
+          label.label Example Dropdown
+          .select
+            select
+              option Option 1
+              option Option 2
+              option Option 3
 
-      .field
-        label.label Example Dropdown
-        .select
-          select
-            option Option 1
-            option Option 2
-            option Option 3
+        .field
+          label.label Example Checkboxes
+          .checkbox
+            input(type="checkbox")
+            label.label Check 1
+          .checkbox
+            input(type="checkbox")
+            label.label Check 2
+          .checkbox
+            input(type="checkbox")
+            label.label Check 3
+          .checkbox
+            input(type="checkbox")
+            label.label Check 4
 
-      .field
-        label.label Example Checkboxes
-        .checkbox
-          input(type="checkbox")
-          label.label Check 1
-        .checkbox
-          input(type="checkbox")
-          label.label Check 2
-        .checkbox
-          input(type="checkbox")
-          label.label Check 3
-        .checkbox
-          input(type="checkbox")
-          label.label Check 4
+        .field
+          label.label Example Radio Buttons
+          .radio-buttons
+            .radio
+              input#example-radio-1(type="radio" name="example-radio")
+              label.label(for="example-radio-1") Radio 1
+            .radio
+              input#example-radio-2(type="radio" name="example-radio")
+              label.label(for="example-radio-2") Radio 2
+            .radio
+              input#example-radio-3(type="radio" name="example-radio")
+              label.label(for="example-radio-3") Radio 3
 
-      .field
-        label.label Example Radio Buttons
-        .radio-buttons
-          .radio
-            input#example-radio-1(type="radio" name="example-radio")
-            label.label(for="example-radio-1") Radio 1
-          .radio
-            input#example-radio-2(type="radio" name="example-radio")
-            label.label(for="example-radio-2") Radio 2
-          .radio
-            input#example-radio-3(type="radio" name="example-radio")
-            label.label(for="example-radio-3") Radio 3
+        .field
+          label.label Example Stacked Radio Buttons
+          .radio-buttons.stacked
+            .radio
+              input#example2-radio-1(type="radio" name="example2-radio")
+              label.label(for="example2-radio-1") Radio 1
+            .radio
+              input#example2-radio-2(type="radio" name="example2-radio")
+              label.label(for="example2-radio-2") Radio 2
+            .radio
+              input#example2-radio-3(type="radio" name="example2-radio")
+              label.label(for="example2-radio-3") Radio 3
 
-      .field
-        label.label Example Stacked Radio Buttons
-        .radio-buttons.stacked
-          .radio
-            input#example2-radio-1(type="radio" name="example2-radio")
-            label.label(for="example2-radio-1") Radio 1
-          .radio
-            input#example2-radio-2(type="radio" name="example2-radio")
-            label.label(for="example2-radio-2") Radio 2
-          .radio
-            input#example2-radio-3(type="radio" name="example2-radio")
-            label.label(for="example2-radio-3") Radio 3
-
-      .field
-        label.label Example Textarea
-        textarea
+        .field
+          label.label Example Textarea
+          textarea
+    .column
+      +code_block(`
+      <form>
+        <div class="field">
+          <label class="label">Example Input</label>
+          <input class="input"/><small class="helper">Helper text to aid in filling in the form input.</small>
+        </div>
+        <div class="field">
+          <label class="label">Example Password</label>
+          <input type="password" class="input"/>
+        </div>
+        <div class="field">
+          <label class="label">Example Dropdown</label>
+          <div class="select">
+            <select>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Example Checkboxes</label>
+          <div class="checkbox">
+            <input type="checkbox"/>
+            <label class="label">Check 1</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox"/>
+            <label class="label">Check 2</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox"/>
+            <label class="label">Check 3</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox"/>
+            <label class="label">Check 4</label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Example Radio Buttons</label>
+          <div class="radio-buttons">
+            <div class="radio">
+              <input id="example-radio-1" type="radio" name="example-radio"/>
+              <label for="example-radio-1" class="label">Radio 1</label>
+            </div>
+            <div class="radio">
+              <input id="example-radio-2" type="radio" name="example-radio"/>
+              <label for="example-radio-2" class="label">Radio 2</label>
+            </div>
+            <div class="radio">
+              <input id="example-radio-3" type="radio" name="example-radio"/>
+              <label for="example-radio-3" class="label">Radio 3</label>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Example Stacked Radio Buttons</label>
+          <div class="radio-buttons stacked">
+            <div class="radio">
+              <input id="example2-radio-1" type="radio" name="example2-radio"/>
+              <label for="example2-radio-1" class="label">Radio 1</label>
+            </div>
+            <div class="radio">
+              <input id="example2-radio-2" type="radio" name="example2-radio"/>
+              <label for="example2-radio-2" class="label">Radio 2</label>
+            </div>
+            <div class="radio">
+              <input id="example2-radio-3" type="radio" name="example2-radio"/>
+              <label for="example2-radio-3" class="label">Radio 3</label>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Example Textarea</label>
+          <textarea></textarea>
+        </div>
+      </form>
+      `)
 
   section
     h3 Disabled
 
-    form
-      .field
-        label.label Disabled Input
-        input(disabled).input
+    .column
+      form
+        .field
+          label.label Disabled Input
+          input(disabled).input
 
-      .field
-        label.label Disabled Select
-        .select
-          select(disabled)
-            option Option 1
+        .field
+          label.label Disabled Select
+          .select
+            select(disabled)
+              option Option 1
 
-      .field
-        label.label Disabled Checkboxes
-        .checkbox
-          input(type="checkbox" disabled)
-          label.label Check 1
-        .checkbox
-          input(type="checkbox" disabled)
-          label.label Check 2
+        .field
+          label.label Disabled Checkboxes
+          .checkbox
+            input(type="checkbox" disabled)
+            label.label Check 1
+          .checkbox
+            input(type="checkbox" disabled)
+            label.label Check 2
 
-      .field
-        label.label Disabled Radio Buttons
-        .radio-buttons
-          .radio
-            input#example3-radio-1(type="radio" name="example3-radio" disabled)
-            label.label(for="example3-radio-1") Radio 1
-          .radio
-            input#example3-radio-2(type="radio" name="example3-radio" disabled)
-            label.label(for="example3-radio-2") Radio 2
+        .field
+          label.label Disabled Radio Buttons
+          .radio-buttons
+            .radio
+              input#example3-radio-1(type="radio" name="example3-radio" disabled)
+              label.label(for="example3-radio-1") Radio 1
+            .radio
+              input#example3-radio-2(type="radio" name="example3-radio" disabled)
+              label.label(for="example3-radio-2") Radio 2
+    .column
+      +code_block(`
+      <form>
+        <div class="field">
+          <label class="label">Disabled Input</label>
+          <input disabled="disabled" class="input"/>
+        </div>
+        <div class="field">
+          <label class="label">Disabled Select</label>
+          <div class="select">
+            <select disabled="disabled">
+              <option>Option 1</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Disabled Checkboxes</label>
+          <div class="checkbox">
+            <input type="checkbox" disabled="disabled"/>
+            <label class="label">Check 1</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" disabled="disabled"/>
+            <label class="label">Check 2</label>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Disabled Radio Buttons</label>
+          <div class="radio-buttons">
+            <div class="radio">
+              <input id="example3-radio-1" type="radio" name="example3-radio" disabled="disabled"/>
+              <label for="example3-radio-1" class="label">Radio 1</label>
+            </div>
+            <div class="radio">
+              <input id="example3-radio-2" type="radio" name="example3-radio" disabled="disabled"/>
+              <label for="example3-radio-2" class="label">Radio 2</label>
+            </div>
+          </div>
+        </div>
+      </form>
+      `)
 
   section
     h3 Form Validation
 
-    form
-      .field
-        label.label Base Input
-        input.input
-      .field.primary
-        label.label Primary Input
-        input.input
-      .field.success
-        label.label Success Input
-        input.input
-        .validation Validation text!
-        small.helper The helper text is unchanged.
-      .field.warning
-        label.label Warning Input
-        input.input
-        .validation Validation text!
-      .field.danger
-        label.label Danger Input
-        input.input
-        .validation Validation text!
+    .column
+      form
+        .field
+          label.label Base Input
+          input.input
+        .field.primary
+          label.label Primary Input
+          input.input
+        .field.success
+          label.label Success Input
+          input.input
+          .validation Validation text!
+          small.helper The helper text is unchanged.
+        .field.warning
+          label.label Warning Input
+          input.input
+          .validation Validation text!
+        .field.danger
+          label.label Danger Input
+          input.input
+          .validation Validation text!
+    .column
+      +code_block(`
+      <form>
+        <div class="field">
+          <label class="label">Base Input</label>
+          <input class="input"/>
+        </div>
+        <div class="field primary">
+          <label class="label">Primary Input</label>
+          <input class="input"/>
+        </div>
+        <div class="field success">
+          <label class="label">Success Input</label>
+          <input class="input"/>
+          <div class="validation">Validation text!</div><small class="helper">The helper text is unchanged.</small>
+        </div>
+        <div class="field warning">
+          <label class="label">Warning Input</label>
+          <input class="input"/>
+          <div class="validation">Validation text!</div>
+        </div>
+        <div class="field danger">
+          <label class="label">Danger Input</label>
+          <input class="input"/>
+          <div class="validation">Validation text!</div>
+        </div>
+      </form>
+      `)
 
   section
     h3 Form Groups
     p Put form elements inline by using the field-inline class.
 
-    form
-      .field-inline.columns
-        label.label.col-3 Example Input
-        input.input
+    .column
+      form
+        .field-inline.grid
+          label.label.col-3 Example Input
+          input.input
 
-      .field-inline.columns
-        label.label.col-3 Example Password
-        input.input(type="password")
+        .field-inline.grid
+          label.label.col-3 Example Password
+          input.input(type="password")
 
-      .field-inline
-        .select
-          select
-            option Option 1
-            option Option 2
-            option Option 3
+        .field-inline
+          .select
+            select
+              option Option 1
+              option Option 2
+              option Option 3
 
-        .checkbox
-          input(type="checkbox")
-          label.label Check 1
+          .checkbox
+            input(type="checkbox")
+            label.label Check 1
 
-        .radio-buttons
-          .radio
-            input#example4-radio-1(type="radio" name="example4-radio")
-            label.label(for="example4-radio-1") Radio 1
-          .radio
-            input#example4-radio-2(type="radio" name="example4-radio")
-            label.label(for="example4-radio-2") Radio 2
+          .radio-buttons
+            .radio
+              input#example4-radio-1(type="radio" name="example4-radio")
+              label.label(for="example4-radio-1") Radio 1
+            .radio
+              input#example4-radio-2(type="radio" name="example4-radio")
+              label.label(for="example4-radio-2") Radio 2
 
-        input.input(type="password")
-        button.primary Submit
+          input.input(type="password")
+          button.primary Submit
+    .column
+      +code_block(`
+      <form>
+        <div class="field-inline grid">
+          <label class="label col-3">Example Input</label>
+          <input class="input"/>
+        </div>
+        <div class="field-inline grid">
+          <label class="label col-3">Example Password</label>
+          <input type="password" class="input"/>
+        </div>
+        <div class="field-inline">
+          <div class="select">
+            <select>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox"/>
+            <label class="label">Check 1</label>
+          </div>
+          <div class="radio-buttons">
+            <div class="radio">
+              <input id="example4-radio-1" type="radio" name="example4-radio"/>
+              <label for="example4-radio-1" class="label">Radio 1</label>
+            </div>
+            <div class="radio">
+              <input id="example4-radio-2" type="radio" name="example4-radio"/>
+              <label for="example4-radio-2" class="label">Radio 2</label>
+            </div>
+          </div>
+          <input type="password" class="input"/>
+          <button class="primary">Submit</button>
+        </div>
+      </form>
+      `)
 
   section
     h3 Attaching
     p Attach buttons to an input by using the attached class on a field.
 
-    form
-      .field-inline
-        label.label.col-2 Username
-        .attached
+    .column
+      form
+        .field-inline
+          label.label.col-2 Username
+          .attached
+            input.input
+            button Check Availability
+        .field-inline.attached
+          button.success Button
           input.input
-          button Check Availability
-      .field-inline.attached
-        button.success Button
-        input.input
-        button Button 2
+          button Button 2
+
+    .column
+      +code_block(`
+      <form>
+        <div class="field-inline">
+          <label class="label col-2">Username</label>
+          <div class="attached">
+            <input class="input"/>
+            <button>Check Availability</button>
+          </div>
+        </div>
+        <div class="field-inline attached">
+          <button class="success">Button</button>
+          <input class="input"/>
+          <button>Button 2</button>
+        </div>
+      </form>
+      `)

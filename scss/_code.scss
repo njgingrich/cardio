@@ -10,7 +10,8 @@ pre {
   margin: 0;
 
   code {
-    white-space: inherit;
+    white-space: pre-wrap;
     font-family: $mono-font-family;
+    overflow: scroll;
   }
 }

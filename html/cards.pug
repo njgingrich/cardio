@@ -3,20 +3,18 @@ extends templates/base
 block content
   h2 Cards
   section
-    h3 Basic
+    h3 Base Card
     p Use a card to put content into a defined block.
 
     .grid
-      .column.col-4
-        h3 Base Card
+      .half
         .card.card-fixed
           header.card-header
             h4 Card Header
           .card-body
             p Text inside card body
-      .column
+      .half
         +code_block(`
-          <h3>Base Card</h3>
           <div class="card card-fixed">
             <header class="card-header">
               <h4>Card Header</h4>
@@ -33,22 +31,59 @@ block content
     h3 Card Body
     p Inside the card, you can have content, images, or buttons.
 
-    .card
-      +img("1200x400.jpg")
-      .card-body
-        p This is some text under the image.
 
-    .card.card-fixed
-      .card-body
-        p This is some text above the image.
-      +img("1200x400.jpg")
+    .grid
+      .column.col-6
+        .card
+          +img("1200x400.jpg")
+          .card-body
+            p This is some text under the image.
+      .column.col-6
+        +code_block(`
+        <div class="card">
+          <img src="img/1200x400.jpg">
+          <div class="card-body">
+            <p>This is some text under the image.</p>
+          </div>
+        </div>
+        `)
 
-    .card
-      header.card-header
-        h4 Card header
-      +img("1200x400.jpg")
-      .card-body
-        p This is some text below the image.
+    .grid
+      .column.col-6
+        .card.card-fixed
+          .card-body
+            p This is some text above the image.
+          +img("1200x400.jpg")
+      .column.col-6
+        +code_block(`
+        <div class="card card-fixed">
+          <div class="card-body">
+            <p>This is some text above the image.</p>
+          </div>
+          <img src="img/1200x400.jpg">
+        </div>
+        `)
+
+    .grid
+      .column.col-6
+        .card
+          header.card-header
+            h4 Card header
+          +img("1200x400.jpg")
+          .card-body
+            p This is some text below the image.
+      .column.col-6
+        +code_block(`
+        <div class="card">
+          <header class="card-header">
+            <h4>Card header</h4>
+          </header>
+          <img src="img/1200x400.jpg">
+          <div class="card-body">
+            <p>This is some text below the image.</p>
+          </div>
+        </div>
+        `)
 
   section
     h3 Card Footer
@@ -56,22 +91,57 @@ block content
       | The card footer usually contains links or actions with buttons.
       | If you want buttons to be a part of the card, use the card-buttons class.
 
-    .card.card-fixed
-      header.card-header
-        h4 Card header
-      .card-body
-        p This is some text above the image.
-      +img("1200x400.jpg")
-      .card-footer
-        button.primary Click me
-
-    .card.card-fixed
-      header.card-header
-        h4 Card header
-      .card-body
-        p This is some text above the image.
-      +img("1200x400.jpg")
-      .card-buttons
-        button Button 1
-        button Button 2
-        button.primary Button 3
+    .grid
+      .half
+        .card.card-fixed
+          header.card-header
+            h4 Card header
+          .card-body
+            p This is some text above the image.
+          +img("1200x400.jpg")
+          .card-footer
+            button.primary Click me
+      .half
+        +code_block(`
+        <div class="card card-fixed">
+          <header class="card-header">
+            <h4>Card header</h4>
+          </header>
+          <div class="card-body">
+            <p>This is some text above the image.</p>
+          </div>
+          <img src="img/1200x400.jpg">
+          <div class="card-footer">
+            <button class="primary">Click me</button>
+          </div>
+        </div>
+        `)
+    .grid
+      .half
+        .card.card-fixed
+          header.card-header
+            h4 Card header
+          .card-body
+            p This is some text above the image.
+          +img("1200x400.jpg")
+          .card-buttons
+            button Button 1
+            button Button 2
+            button.primary Button 3
+      .half
+        +code_block(`
+        <div class="card card-fixed">
+          <header class="card-header">
+            <h4>Card header</h4>
+          </header>
+          <div class="card-body">
+            <p>This is some text above the image.</p>
+          </div>
+          <img src="img/1200x400.jpg">
+          <div class="card-buttons">
+            <button>Button 1</button>
+            <button>Button 2</button>
+            <button class="primary">Button 3</button>
+          </div>
+        </div>
+        `)
