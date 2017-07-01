@@ -1,6 +1,7 @@
 .navbar {
   padding: 0.5rem 0;
   display: flex;
+  align-items: center;
 
   ul {
     margin: 0;
@@ -8,7 +9,7 @@
 
     li {
       display: inline-block;
-      margin-right: 1rem;
+      padding: 0 0.5rem;
 
       a {
         color: inherit;
@@ -33,4 +34,29 @@
       color: darken($white, 10%);
     }
   }
+
+  .field-inline {
+    padding: 0;
+    margin-right: 0;
+  }
+
+  button,
+  div button {
+    box-shadow: none;
+  }
+
+  .brand {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.5rem;
+  }
+
+  &:last-child {
+    padding-right: 1rem;
+  }
+}
+
+.right {
+  margin-left: auto;
+  display: flex;
 }
