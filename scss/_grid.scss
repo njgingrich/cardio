@@ -78,6 +78,36 @@ $columns: 12;
       }
       @include column;
     }
+
+    .col-#{$i}-sm {
+      flex: none;
+      width: percentage($i/12);
+      @include column;
+    }
+
+    .col-#{$i}-md {
+      @media (min-width: $breakpoint-sm) {
+        flex: none;
+        width: percentage($i/12);
+      }
+      @include column;
+    }
+
+    .col-#{$i}-lg {
+      @media (min-width: $breakpoint-md) {
+        flex: none;
+        width: percentage($i/12);
+      }
+      @include column;
+    }
+
+    .col-#{$i}-lg {
+      @media (min-width: $breakpoint-lg) {
+        flex: none;
+        width: percentage($i/12);
+      }
+      @include column;
+    }
   }
 }
 @include col-nums;

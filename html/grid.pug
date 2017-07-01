@@ -4,72 +4,218 @@ block content
   h2 Grid
 
   section
-    h3 Columns
-    p Add as many columns as you want, they will reflow as necessary.
-    .grid
-      .column
-        p.col-example Column 1
-      .column
-        p.col-example Column 2
+    .column
+      h3 Columns
+      p Add as many columns as you want, they will reflow as necessary.
+      .grid
+        .column
+          p.col-example Column 1
+        .column
+          p.col-example Column 2
+    .column
+      +code_block(`
+      <div class="grid">
+        <div class="column">
+          <p class="col-example">Column 1</p>
+        </div>
+        <div class="column">
+          <p class="col-example">Column 2</p>
+        </div>
+      </div>
+      `)
+    .column
+      .grid
+        .column
+          p.col-example 1
+        .column
+          p.col-example 2
+        .column
+          p.col-example 3
+        .column
+          p.col-example 4
+        .column
+          p.col-example 5
+        .column
+          p.col-example 6
+        .column
+          p.col-example 6
+        .column
+          p.col-example 5
+        .column
+          p.col-example 4
+        .column
+          p.col-example 3
+        .column
+          p.col-example 2
+        .column
+          p.col-example 1
+    .column
+      +code_block(`
+      <div class="grid">
+        <div class="column">
+          <p class="col-example">1</p>
+        </div>
+        <div class="column">
+          <p class="col-example">2</p>
+        </div>
+        <div class="column">
+          <p class="col-example">3</p>
+        </div>
+        <div class="column">
+          <p class="col-example">4</p>
+        </div>
+        <div class="column">
+          <p class="col-example">5</p>
+        </div>
+        <div class="column">
+          <p class="col-example">6</p>
+        </div>
+        <div class="column">
+          <p class="col-example">6</p>
+        </div>
+        <div class="column">
+          <p class="col-example">5</p>
+        </div>
+        <div class="column">
+          <p class="col-example">4</p>
+        </div>
+        <div class="column">
+          <p class="col-example">3</p>
+        </div>
+        <div class="column">
+          <p class="col-example">2</p>
+        </div>
+        <div class="column">
+          <p class="col-example">1</p>
+        </div>
+      </div>
+      `)
 
-    .grid
-      .column
-        p.col-example 1
-      .column
-        p.col-example 2
-      .column
-        p.col-example 3
-      .column
-        p.col-example 4
-      .column
-        p.col-example 5
-      .column
-        p.col-example 6
-      .column
-        p.col-example 6
-      .column
-        p.col-example 5
-      .column
-        p.col-example 4
-      .column
-        p.col-example 3
-      .column
-        p.col-example 2
-      .column
-        p.col-example 1
-
-    p You can also use modifiers like half, one-third and two-thirds, one-fourth and three-fourths, or the numeric col-1 through col-12.
-
-    .grid
-      .half
-        p.col-example Column (half)
-      .column
-        p.col-example Column
-      .column
-        p.col-example Column
-    .grid
-      .column
-        p.col-example Column
-      .one-third
-        p.col-example Column (one-third)
-      .column
-        p.col-example Column
-      .column
-        p.col-example Column
+    .column
+      p You can also use modifiers like half, one-third and two-thirds, one-fourth and three-fourths, or the numeric col-1 through col-12.
+      .grid
+        .half
+          p.col-example Column (half)
+        .column
+          p.col-example Column
+        .column
+          p.col-example Column
+      .grid
+        .column
+          p.col-example Column
+        .one-third
+          p.col-example Column (one-third)
+        .column
+          p.col-example Column
+        .column
+          p.col-example Column
+    .column
+      +code_block(`
+      <div class="grid">
+        <div class="half">
+          <p class="col-example">Column (half)</p>
+        </div>
+        <div class="column">
+          <p class="col-example">Column</p>
+        </div>
+        <div class="column">
+          <p class="col-example">Column</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="column">
+          <p class="col-example">Column</p>
+        </div>
+        <div class="one-third">
+          <p class="col-example">Column (one-third)</p>
+        </div>
+        <div class="column">
+          <p class="col-example">Column</p>
+        </div>
+        <div class="column">
+          <p class="col-example">Column</p>
+        </div>
+      </div>
+      `)
 
   section
     h3 Offsets
 
     p Use offsets like offset-3 or offset-10 to push content to the side.
 
-    .grid
-      .column.offset-3.half
-        p.col-example Half-width col offset by 3
-    .grid
-      .column.offset-10
-        p.col-example Col offset by 10
-    .grid
-      .column.one-fourth
-        p.col-example Col width one fourth
-      .column.offset-3.one-third
-        p.col-example Third-width col offset by 3
+    .column
+      .grid
+        .column.offset-3.half
+          p.col-example Half-width col offset by 3
+      .grid
+        .column.offset-10
+          p.col-example Col offset by 10
+      .grid
+        .column.one-fourth
+          p.col-example Col width one fourth
+        .column.offset-3.one-third
+          p.col-example Third-width col offset by 3
+    .column
+      +code_block(`
+      <div class="grid">
+        <div class="column offset-3 half">
+          <p class="col-example">Half-width col offset by 3</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="column offset-10">
+          <p class="col-example">Col offset by 10</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="column one-fourth">
+          <p class="col-example">Col width one fourth</p>
+        </div>
+        <div class="column offset-3 one-third">
+          <p class="col-example">Third-width col offset by 3</p>
+        </div>
+      </div>
+      `)
+
+  section
+    h3 Column Breakpoints
+    p
+      | By default, columns will resize until they hit a breakpoint (< 769px) and change to be full-width columns.
+      | If you wish to override this behavior, you can add a modifier to a column class of #[+code("sm")], #[+code("md")],  #[+code("lg")], or
+      | #[+code("xl")]. #[+code("sm")] columns apply between 0 and 768px, #[+code("md")] between 769px and 1000px, #[+code("lg")] between
+      | 1001 px and 1400px, and #[+code("lg")] > 1400px.
+    .column
+      .grid
+        .col-3-sm.col-6-md.col-10-lg.col-6-xl
+          .col-example
+            p 3 sm
+            p 6 md
+            p 10 lg
+            p 6 xl
+        .col-9-sm.col-3-mid.col-2-lg.col-6-xl
+          .col-example
+            p 9 sm
+            p 3 md
+            p 2 lg
+            p 6 xl
+    .column
+      +code_block(`
+      <div class="grid">
+        <div class="col-3-sm col-6-md col-10-lg col-6-xl">
+          <div class="col-example">
+            <p>3 sm</p>
+            <p>6 md</p>
+            <p>10 lg</p>
+            <p>6 xl</p>
+          </div>
+        </div>
+        <div class="col-9-sm col-3-mid col-2-lg col-6-xl">
+          <div class="col-example">
+            <p>9 sm</p>
+            <p>3 md</p>
+            <p>2 lg</p>
+            <p>6 xl</p>
+          </div>
+        </div>
+      </div>
+      `)

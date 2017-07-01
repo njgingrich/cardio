@@ -1,0 +1,72 @@
+extends templates/base
+
+block content
+  h2 Media Components
+  section
+    .column
+      h3 Images
+      p
+        | Cardio won't change any media styling on its own. If you wish to make an image resize inside its container,
+        | you can add the #[+code("responsive")] class to it.
+      .grid
+        .column
+          p This image is 600px.
+          +img('600x600.jpg')
+        .column
+          p This image resizes to fit its container.
+          img.responsive(src='img/600x600.jpg')
+    .column
+      +code_block(`
+      <div class="grid">
+        <div class="column">
+          <p>This image is 600px.</p>
+          <img src="img/600x600.jpg" class="responsive"/>
+        </div>
+        <div class="column">
+          <p>This image resizes to fit its container.</p>
+          <img src="img/600x600.jpg" class="responsive"/>
+        </div>
+      </div>
+      `)
+
+  section
+    h3 Video
+    p
+      | Likewise, to resize a video or an embedded video (ala Youtube), you can add the #[+code("responsive")] class to it as well.
+    .column
+      .column.fixed-400
+        p This video is limited to 400px.
+        video.responsive(src="img/placeholder.mp4" controls)
+
+      .column.fixed-400
+        p
+          | This embedded video from youtube is limited to 400px. Since it is contained within an iframe, the iframe must be wrapped
+          | within a div with the responsive class attached.
+        .embedded
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/YSkHIv7GhOM" frameborder="0" allowfullscreen></iframe>
+      .column
+        p This video's container is the entire #[+code("<section>")], and still expands to fill 100% width.
+        .embedded
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/YSkHIv7GhOM" frameborder="0" allowfullscreen></iframe>
+    .column
+      +code_block(`
+      <div class="column fixed-400">
+        <p>This video is limited to 400px.</p>
+        <video src="img/placeholder.mp4" controls="controls" class="responsive"></video>
+      </div>
+      <div class="column fixed-400">
+        <p>
+          This embedded video from youtube is limited to 400px. Since it is contained within an iframe, the iframe must be wrapped
+          within a div with the responsive class attached.
+        </p>
+        <div class="embedded">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/YSkHIv7GhOM" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="column">
+        <p>This video's container is the entire &lt;section&gt;, and still expands to fill 100% width.</p>
+        <div class="embedded">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/YSkHIv7GhOM" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+      `)
