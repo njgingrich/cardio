@@ -12,7 +12,7 @@
   display: flex;
   flex: 1 0 auto;
   background-color: $white;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .docs-menu {
@@ -54,10 +54,32 @@ body {
   flex-direction: column;
 }
 
+$content-shadow-size: 24px;
 .content {
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
+  position: relative;
+
+  &::before {
+    box-shadow: (-$content-shadow-size) 0 $content-shadow-size (-$content-shadow-size) $gray inset;
+    content: " ";
+    height: 100%;
+    left: -($content-shadow-size);
+    position: absolute;
+    top: 0;
+    width: $content-shadow-size;
+  }
+
+  &::after {
+    box-shadow: $content-shadow-size 0 $content-shadow-size (-$content-shadow-size) $gray inset;
+    content: " ";
+    height: 100%;
+    right: -($content-shadow-size);
+    position: absolute;
+    top: 0;
+    width: $content-shadow-size;
+  }
 }
 
 footer {
