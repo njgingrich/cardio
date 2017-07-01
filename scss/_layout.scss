@@ -4,6 +4,7 @@
   max-width: $breakpoint-lg - 1;
 
   @media (min-width: $breakpoint-lg) {
+    width: $breakpoint-lg;
     margin-left: auto;
     margin-right: auto;
   }
