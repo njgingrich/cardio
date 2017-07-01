@@ -972,7 +972,7 @@ textarea {
 section {
   padding: 0.75rem 0.75rem 2rem 0.75rem;
   margin: 0.5rem 1rem 2rem 1rem;
-  background-color: #fbfbfb; }
+  background-color: #fdfdfd; }
   section h1,
   section h2,
   section h3,
@@ -980,6 +980,32 @@ section {
   section h5,
   section h6 {
     margin-top: 0.5rem; }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem; }
+  .table thead {
+    border-bottom: 2px solid #757575; }
+    .table thead tr th {
+      text-align: left; }
+  .table thead tr th,
+  .table tbody tr td {
+    padding: 0.5rem; }
+  .table thead tr,
+  .table tbody tr {
+    border-bottom: 1px solid #cdcdcd; }
+
+.table.striped tbody tr:nth-child(even) {
+  background-color: #f3f3f3; }
+
+.table.bordered {
+  border: 1px solid #cdcdcd; }
+  .table.bordered thead {
+    border-color: #cdcdcd; }
+  .table.bordered thead tr th,
+  .table.bordered tbody tr td {
+    border: 1px solid #cdcdcd; }
 
 h1 {
   font-size: 3.2rem; }

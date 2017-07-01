@@ -1,0 +1,43 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+
+  thead {
+    border-bottom: 2px solid $gray;
+
+    tr th {
+      text-align: left;
+    }
+  }
+
+  thead tr th,
+  tbody tr td {
+    padding: 0.5rem;
+  }
+
+  thead,
+  tbody {
+    tr {
+      border-bottom: 1px solid rgba($gray-light, 50);
+    }
+  }
+}
+
+.table.striped {
+  tbody tr:nth-child(even) {
+    background-color: lighten($gray-light, 15%);
+  }
+}
+
+.table.bordered {
+  border: 1px solid $gray-light;
+  thead {
+    border-color: $gray-light;
+  }
+
+  thead tr th,
+  tbody tr td {
+    border: 1px solid $gray-light;
+  }
+}

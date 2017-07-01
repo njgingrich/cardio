@@ -1,0 +1,96 @@
+extends templates/base
+
+block content
+  h2 Tables
+  section
+    h3 Base Styling
+    p By default, tables have fairly minimalistic styling. The styling can be added to the table by simply adding the #[+code("table")] class.
+    table.table
+      thead
+        tr
+          th Name
+          th STR
+          th DEX
+          th CON
+          th INT
+          th WIS
+          th CHA
+      tbody
+        tr
+          td Magus Burnsides
+          td 5
+          td 2
+          td 4
+          td 0
+          td -1
+          td 1
+        tr
+          td Taako
+          td 0
+          td 2
+          td 2
+          td 5
+          td 3
+          td -1
+        tr
+          td Merl
+          td 1
+          td 0
+          td 3
+          td 4
+          td 2
+          td 2
+
+  section
+    h3 Modifiers
+    p
+      | You can add zebra striping to a table through the #[+code("striped")] class, or add a border to all the elements in the table
+      | by adding the #[+code("bordered")] class. Individual rows can be highlighted with a modifier color by appending it to a #[+code("tr")].
+
+    table.table.striped
+      thead
+        tr
+          th First Name
+          th Last Name
+          th Favorite Video Game
+      tbody
+        tr
+          td David
+          td Spade
+          td The Witcher 3
+        tr
+          td Karl
+          td Urban
+          td Dota 2
+        tr
+          td Jeremy
+          td Lin
+          td Dota 2
+        tr
+          td Chester
+          td Arthur
+          td Chess
+
+    table.table.bordered
+      thead
+        tr
+          th First Name
+          th Last Name
+          th Favorite Video Game
+      tbody
+        tr
+          td David
+          td Spade
+          td The Witcher 3
+        tr.primary
+          td Karl
+          td Urban
+          td Dota 2
+        tr
+          td Jeremy
+          td Lin
+          td Dota 2
+        tr
+          td Chester
+          td Arthur
+          td Chess
