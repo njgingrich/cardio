@@ -913,7 +913,8 @@ textarea {
   color: #ffffff; }
 
 .navbar {
-  padding: 0.5rem 0; }
+  padding: 0.5rem 0;
+  display: flex; }
   .navbar ul {
     margin: 0;
     padding: 0.5rem; }
@@ -926,6 +927,12 @@ textarea {
         text-decoration: none; }
         .navbar ul li a:visited, .navbar ul li a:active {
           color: inherit; }
+    .navbar ul.right {
+      margin-left: auto; }
+  .navbar.primary {
+    background-color: #3f51b5; }
+    .navbar.primary ul li a:hover {
+      color: #e6e6e6; }
 
 section {
   padding: 0.75rem 0.75rem 2rem 0.75rem;

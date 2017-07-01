@@ -3,6 +3,24 @@ extends templates/base
 block content
   h2 Navs
   section
-    h3 Navs
-    p By default, navs are responsive and will resize into column mode for a mobile viewport.
+    h3 Navbar
+    p
+      | Define a navbar through the usual html markup, and simply add the #[+code("navbar")] class, along with an optional color modifier class
+      | to define the color scheme for the navbar. Content can be aligned to the right by adding a second #[+code("<ul>")] inside the navbar and
+      | giving it the #[+code("right")] class. A second right-aligned list can be added to the nav to center the first one.
+
+    nav.navbar.primary
+      ul
+        li
+          a(href="#") Item 1
+        li
+          a(href="#") Item 2
+      ul.right
+        li
+          a(href="#") Item 3
+
+  section
+    h3 Navbar Items
+    p
+      | You can add buttons, images, inline-forms, or anything else to a navbar.
 
