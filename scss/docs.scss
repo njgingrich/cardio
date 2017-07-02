@@ -23,14 +23,9 @@
 
 .docs-menu {
   min-width: 200px;
-  order: 1;
 
   aside {
     width: 200px;
-  }
-
-  @media (min-width: $breakpoint-sm) {
-    order: 2;
   }
 
   .sticky {
@@ -43,10 +38,6 @@
 
 .docs-content {
   padding: 1rem;
-  order: 2;
-  @media (min-width: $breakpoint-sm) {
-    order: 1;
-  }
 }
 
 html {

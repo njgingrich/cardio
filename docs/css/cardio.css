@@ -200,7 +200,6 @@ form {
 
 .input {
   display: block;
-  flex: 1 1 auto;
   height: 2rem;
   font-size: 16px;
   margin: 0;
@@ -1527,7 +1526,6 @@ h5 + hr,
 h6 + hr {
   margin-top: -0.25rem; }
 
-ul li,
 ol li {
   padding: 0.3rem; }
 
@@ -1596,12 +1594,18 @@ video.responsive {
 
 .navbar {
   display: flex;
-  align-items: center; }
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 1rem; }
   .navbar ul {
-    margin: 0; }
+    flex-grow: 1;
+    flex-basis: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none; }
     .navbar ul li {
-      display: inline-block;
-      padding: 0.75rem 0.5rem; }
+      padding: 0.75rem 0.5rem;
+      border-bottom: 1px solid #cdcdcd; }
       .navbar ul li a {
         color: inherit;
         padding: 0.75rem 0.5rem 0.75rem 0.5rem;
@@ -1610,8 +1614,9 @@ video.responsive {
           color: inherit; }
         .navbar ul li a.active {
           font-weight: bold;
-          padding-bottom: 0.55rem;
-          border-bottom: 0.2rem solid #ffffff; }
+          margin-left: -0.5rem;
+          padding-left: 0.8rem;
+          border-left: 0.2rem solid #ffffff; }
     .navbar ul.right {
       margin-left: auto; }
   .navbar.primary {
@@ -1643,13 +1648,58 @@ video.responsive {
   .navbar .brand {
     font-size: 1.2rem;
     font-weight: bold;
-    padding: 0.5rem; }
-  .navbar:last-child {
+    padding: 0.5rem;
+    margin-left: auto;
+    margin-right: auto; }
+  .navbar .right {
+    margin-left: inherit;
+    padding-left: 1rem;
     padding-right: 1rem; }
-
-.right {
-  margin-left: auto;
-  display: flex; }
+  .navbar .field-inline,
+  .navbar div.field-inline {
+    flex-grow: 1; }
+    .navbar .field-inline .input,
+    .navbar .field-inline .attached .input,
+    .navbar div.field-inline .input,
+    .navbar div.field-inline .attached .input {
+      width: 100%;
+      flex-basis: 0;
+      flex-grow: 1; }
+  .navbar div.right {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 100%; }
+  @media (min-width: 769px) {
+    .navbar {
+      flex-wrap: nowrap; }
+      .navbar .brand {
+        margin-left: inherit;
+        margin-right: inherit; }
+      .navbar ul {
+        flex-grow: 0;
+        flex-basis: auto; }
+        .navbar ul li {
+          display: inline-block;
+          border: 0; }
+          .navbar ul li a.active {
+            margin-left: 0;
+            padding-left: inherit;
+            padding-bottom: 0.55rem;
+            border-bottom: 0.2rem solid #ffffff;
+            border-left: 0; }
+      .navbar .right,
+      .navbar div.right {
+        display: flex;
+        flex-basis: auto;
+        justify-content: flex-end; }
+        .navbar .right .field-inline,
+        .navbar div.right .field-inline {
+          flex-grow: 0; }
+          .navbar .right .field-inline .input,
+          .navbar .right .field-inline .attached .input,
+          .navbar div.right .field-inline .input,
+          .navbar div.right .field-inline .attached .input {
+            max-width: 217px; } }
 
 section {
   padding: 0.75rem 0.75rem 2rem 0.75rem;

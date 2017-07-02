@@ -10,14 +10,20 @@
 
 .navbar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 1rem;
 
   ul {
+    flex-grow: 1;
+    flex-basis: 100%;
+    padding: 0;
     margin: 0;
+    list-style: none;
 
     li {
-      display: inline-block;
       padding: 0.75rem 0.5rem;
+      border-bottom: 1px solid $gray-light;
 
       a {
         color: inherit;
@@ -31,8 +37,9 @@
 
         &.active {
           font-weight: bold;
-          padding-bottom: 0.55rem;
-          border-bottom: 0.2rem solid $white;
+          margin-left: -0.5rem;
+          padding-left: 0.8rem;
+          border-left: 0.2rem solid $white;
         }
       }
     }
@@ -62,14 +69,74 @@
     font-size: 1.2rem;
     font-weight: bold;
     padding: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  &:last-child {
+  .right {
+    margin-left: inherit;
+    padding-left: 1rem;
     padding-right: 1rem;
   }
-}
 
-.right {
-  margin-left: auto;
-  display: flex;
+  .field-inline,
+  div.field-inline {
+    flex-grow: 1;
+
+    .input,
+    .attached .input {
+      width: 100%;
+      flex-basis: 0;
+      flex-grow: 1;
+    }
+  }
+
+  div.right {
+    display: flex;
+    flex-grow: 1;
+    flex-basis: 100%;
+  }
+
+  @media (min-width: 769px) {
+    flex-wrap: nowrap;
+
+    .brand {
+      margin-left: inherit;
+      margin-right: inherit;
+    }
+
+    ul {
+      flex-grow: 0;
+      flex-basis: auto;
+
+      li {
+        display: inline-block;
+        border: 0;
+
+        a.active {
+          margin-left: 0;
+          padding-left: inherit;
+          padding-bottom: 0.55rem;
+          border-bottom: 0.2rem solid $white;
+          border-left: 0;
+        }
+      }
+    }
+
+    .right,
+    div.right {
+      display: flex;
+      flex-basis: auto;
+      justify-content: flex-end;
+
+      .field-inline {
+        flex-grow: 0;
+
+        .input,
+        .attached .input {
+          max-width: 217px;
+        }
+      }
+    }
+  }
 }

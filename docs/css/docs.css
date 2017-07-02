@@ -16,13 +16,9 @@
   margin: 0; }
 
 .docs-menu {
-  min-width: 200px;
-  order: 1; }
+  min-width: 200px; }
   .docs-menu aside {
     width: 200px; }
-  @media (min-width: 769px) {
-    .docs-menu {
-      order: 2; } }
   .docs-menu .sticky {
     position: relative; }
     @media (min-width: 769px) {
@@ -30,11 +26,7 @@
         position: fixed; } }
 
 .docs-content {
-  padding: 1rem;
-  order: 2; }
-  @media (min-width: 769px) {
-    .docs-content {
-      order: 1; } }
+  padding: 1rem; }
 
 html {
   height: 100%;
