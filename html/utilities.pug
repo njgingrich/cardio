@@ -3,9 +3,12 @@ extends templates/base
 block content
   section
     h3 breakpoints
-    p
-      | Cardio ships with 4 default breakpoints defined as Sass variables. #[+code("breakpoint-xs")] is 415px,
-      | #[+code("breakpoint-sm")] is 769px, #[+code("breakpoint-md")] is 1001px, and #[+code("breakpoint-lg")] is 1401px.
+    p Cardio ships with 4 default breakpoints defined as Sass variables.
+    ul
+      li #[+code("breakpoint-xs")] = 415px
+      li #[+code("breakpoint-sm")] = 769px
+      li #[+code("breakpoint-md")] = 1001px
+      li #[+code("breakpoint-lg")] = 1401px
     p
       | The breakpoints were chosen for good defaults based on different devices - 415px for a portrait mobile device,
       | 769px for a portrait tablet, 1001px for a desktop, and 1401px for a large desktop screen.
@@ -28,10 +31,44 @@ block content
         ul
           li will only show content starting at breakpoint #[+code("[size]")], until the next breakpoint.
 
-    .grid
-      .col-4.up-to-md
-        p.col-example This is hidden >= 1001px.
-      .col-4.at-least-xs
-        p.col-example This is hidden < 415px.
-      .col-4.only-md
-        p.col-example This is shown only from 1001px to 1400px.
+    .column
+      .grid
+        .col-4.up-to-md
+          p.col-example This is hidden >= 1001px.
+        .col-4.at-least-xs
+          p.col-example This is hidden < 415px.
+        .col-4.only-md
+          p.col-example This is shown only from 1001px to 1400px.
+
+      .grid
+        .col-6.only-lg
+          p.col-example This is shown only >= 1401px.
+        .col-6.up-to-lg
+          p.col-example This is hidden >= 1401px.
+        .col-6.at-least-xs
+          p.col-example This is hidden < 415px.
+    .column
+      +code_block(`
+      <div class="grid">
+        <div class="col-4 up-to-md">
+          <p class="col-example">This is hidden >= 1001px.</p>
+        </div>
+        <div class="col-4 at-least-xs">
+          <p class="col-example">This is hidden < 415px.</p>
+        </div>
+        <div class="col-4 only-md">
+          <p class="col-example">This is shown only from 1001px to 1400px.</p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="col-6 only-lg">
+          <p class="col-example">This is shown only >= 1401px.</p>
+        </div>
+        <div class="col-6 up-to-lg">
+          <p class="col-example">This is hidden >= 1401px.</p>
+        </div>
+        <div class="col-6 at-least-xs">
+          <p class="col-example">This is hidden < 415px.</p>
+        </div>
+      </div>
+      `)
