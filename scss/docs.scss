@@ -19,6 +19,11 @@
   flex: 1 0 auto;
   background-color: $white;
   margin: 0;
+  border-top: 0.5rem solid $white;
+
+  @media (min-width: $breakpoint-sm) {
+    border-top: 0;
+  }
 }
 
 .docs-menu {

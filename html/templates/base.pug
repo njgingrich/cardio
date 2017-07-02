@@ -17,8 +17,36 @@ html(lang="en")
           h1 #[+link("index.html", "Cardio")]
           h4 A simple but opinionated CSS framework
         .grid.docs-container
-          .column.up-to-sm
-            p Test menu
+          .column.up-to-sm.nopadding
+            nav.navbar.primary
+              ul
+                li
+                  +link("container.html", "Container")
+                li
+                  +link("section.html", "Section")
+              ul
+                li
+                  +link("buttons.html", "Buttons")
+                li
+                  +link("cards.html", "Cards")
+                li
+                  +link("code.html", "Code")
+                li
+                  +link("forms.html", "Forms")
+                li
+                  +link("grid.html", "Grid")
+                li
+                  +link("media.html", "Media")
+                li
+                  +link("menu.html", "Menus")
+                li
+                  +link("nav.html", "Nav")
+                li
+                  +link("tables.html", "Tables")
+                li
+                  +link("typography.html", "Typography")
+                li
+                  +link("utilities.html", "Utilities")
           .docs-content.column
             block content
           .docs-menu.col-2.at-least-sm
