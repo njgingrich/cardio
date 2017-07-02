@@ -1,5 +1,6 @@
 @import "colors";
 @import "config";
+@import "mixins";
 
 @import "buttons";
 @import "cards";
@@ -15,6 +16,7 @@
 @import "section";
 @import "tables";
 @import "typography";
+@import "utilities";
 
 html {
   font-size: 18px;

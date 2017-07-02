@@ -3,11 +3,12 @@ extends templates/base
 block content
   h2 Media Components
   section
+    h3 Images
+    hr
+    p
+      | Cardio won't change any media styling on its own. If you wish to make an image resize inside its container,
+      | you can add the #[+code("responsive")] class to it.
     .column
-      h3 Images
-      p
-        | Cardio won't change any media styling on its own. If you wish to make an image resize inside its container,
-        | you can add the #[+code("responsive")] class to it.
       .grid
         .column
           p This image is 600px.
@@ -31,6 +32,7 @@ block content
 
   section
     h3 Video
+    hr
     p
       | Likewise, to resize a video or an embedded video (ala Youtube), you can add the #[+code("responsive")] class to it as well.
     .column
@@ -41,11 +43,11 @@ block content
       .column.fixed-400
         p
           | This embedded video from youtube is limited to 400px. Since it is contained within an iframe, the iframe must be wrapped
-          | within a div with the responsive class attached.
+          | within a div with the #[+code("embedded")] class.
         .embedded
           <iframe width="560" height="315" src="https://www.youtube.com/embed/YSkHIv7GhOM" frameborder="0" allowfullscreen></iframe>
       .column
-        p This video's container is the entire #[+code("<section>")], and still expands to fill 100% width.
+        p This video's container is the entire #[+code("<section>")], and as such expands to fill 100% width.
         .embedded
           <iframe width="560" height="315" src="https://www.youtube.com/embed/YSkHIv7GhOM" frameborder="0" allowfullscreen></iframe>
     .column

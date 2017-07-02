@@ -6,30 +6,68 @@ block content
     h3 Vertical Menus
     p Use the menu class on content containing an unordered list to get a vertical menu.
 
-    .grid
-      .column.col-4
-        aside.menu
-          p.menu-header Heading
-          ul
-            li
-              +link("#", "Menu Item 1")
-            li
-              +link("#", "Menu Item 2")
-            li
-              +link("#", "Menu Item 3")
-          p.menu-header Heading 2
-          ul
-            li
-              +link("#", "Menu Item 4")
-            li
-              +link("#", "Menu Item 5")
-            li
-              +link("#", "Menu Item 6")
-            li
-              +link("#", "Menu Item 7")
-            li
-              +link("#", "Menu Item 8")
+    .column
+      .grid
+        .column.col-4
+          .menu
+            p.menu-header Heading
+            ul
+              li
+                +link("#", "Menu Item 1")
+              li
+                +link("#", "Menu Item 2")
+              li
+                +link("#", "Menu Item 3")
+            p.menu-header Heading 2
+            ul
+              li
+                +link("#", "Menu Item 4")
+              li
+                +link("#", "Menu Item 5")
+              li
+                +link("#", "Menu Item 6")
+              li
+                +link("#", "Menu Item 7")
+              li
+                +link("#", "Menu Item 8")
+    .column
+      +code_block(`
+      <div class="menu">
+        <p class="menu-header">Heading</p>
+        <ul>
+          <li>
+            <a href="#">Menu Item 1</a>
+          </li>
+          <li>
+            <a href="#">Menu Item 2</a>
+          </li>
+          <li>
+            <a href="#">Menu Item 3</a>
+          </li>
+        </ul>
+        <p class="menu-header">Heading 2</p>
+        <ul>
+          <li>
+            <a href="#">Menu Item 4</a>
+          </li>
+          <li>
+            <a href="#">Menu Item 5</a>
+          </li>
+          <li>
+            <a href="#">Menu Item 6</a>
+          </li>
+          <li>
+            <a href="#">Menu Item 7</a>
+          </li>
+          <li>
+            <a href="#">Menu Item 8</a>
+          </li>
+        </ul>
+      </div>
+      `)
 
   section
     h3 Sticky Menu
-    p Add the sticky class to a menu to attach it so it stays inside the viewport at all times.
+    p
+      | Add the #[+code("sticky")] class to a menu so it stays inside the viewport at all times.
+      | An example of this is the menu on the right side of the page.

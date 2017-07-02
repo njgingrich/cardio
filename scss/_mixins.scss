@@ -1,0 +1,60 @@
+@function next-breakpoint($cur) {
+  @if $cur == "lg" {
+    @return "max";
+  }
+  @else {
+    $ix: index($breakpoints, $cur);
+    @return nth($breakpoints, $ix + 1);
+  }
+}
+
+// up-to-xs => display:none if size >= 415px
+// up-to-sm => display:none if size >= 769px
+// up-to-md => display:none if size >= 1001px
+// up-to-lg => display:none if size >= 1401px
+@mixin up-to-size($size) {
+  &.up-to-#{$size} {
+    @media (min-width: map-get($breakpointMap, $size)) {
+      display: none;
+    }
+  }
+}
+
+// at-least-xs => display:none if size < 415px
+// at-least-sm => display:none if size < 769px
+// at-least-md => display:none if size < 1001px
+// at-least-lg => display:none if size < 1401px
+@mixin at-least-size($size) {
+  &.at-least-#{$size} {
+    @media (max-width: map-get($breakpointMap, $size)) {
+      display: none;
+    }
+  }
+}
+
+// only-xs => display only from 415px -> 768px
+// only-sm => display only from 769px -> 1000px
+// only-md => display only from 1001px -> 1400px
+// only-xl => display only >1400px
+@mixin only-size($size) {
+  $next: next-breakpoint($size);
+
+  @if $next == "max" {
+    &.only-#{$size} {
+      display: none;
+
+      @media (min-width: map-get($breakpointMap, $size)) {
+        display: inherit;
+      }
+    }
+  }
+  @else {
+    &.only-#{$size} {
+      display: none;
+
+      @media (min-width: map-get($breakpointMap, $size)) and (max-width: (map-get($breakpointMap, $next) - 1)) {
+        display: inherit;
+      }
+    }
+  }
+}

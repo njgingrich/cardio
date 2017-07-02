@@ -1,0 +1,37 @@
+extends templates/base
+
+block content
+  section
+    h3 breakpoints
+    p
+      | Cardio ships with 4 default breakpoints defined as Sass variables. #[+code("breakpoint-xs")] is 415px,
+      | #[+code("breakpoint-sm")] is 769px, #[+code("breakpoint-md")] is 1001px, and #[+code("breakpoint-lg")] is 1401px.
+    p
+      | The breakpoints were chosen for good defaults based on different devices - 415px for a portrait mobile device,
+      | 769px for a portrait tablet, 1001px for a desktop, and 1401px for a large desktop screen.
+
+  section
+    h3 Hide Content
+    hr
+    p
+      | If, instead of resizing content, you want it to simply disappear between certain breakpoints,
+      | you can do so. There are a few mechanisms available to use.
+
+    ol
+      li #[+code("up-to-[size]")]
+        ul
+          li will only show content at or below breakpoint #[+code("[size]")]
+      li #[+code("at-least-[size]")]
+        ul
+          li will only show content starting at breakpoint #[+code("[size]")]
+      li #[+code("only-[size]")]
+        ul
+          li will only show content starting at breakpoint #[+code("[size]")], until the next breakpoint.
+
+    .grid
+      .col-4.up-to-md
+        p.col-example This is hidden >= 1001px.
+      .col-4.at-least-xs
+        p.col-example This is hidden < 415px.
+      .col-4.only-md
+        p.col-example This is shown only from 1001px to 1400px.

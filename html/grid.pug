@@ -4,14 +4,14 @@ block content
   h2 Grid
 
   section
-    .column
-      h3 Columns
-      p Add as many columns as you want, they will reflow as necessary.
-      .grid
-        .column
-          p.col-example Column 1
-        .column
-          p.col-example Column 2
+    h3 Columns
+    hr
+    p Add as many columns as you want, they will reflow as necessary.
+    .grid
+      .column
+        p.col-example Column 1
+      .column
+        p.col-example Column 2
     .column
       +code_block(`
       <div class="grid">
@@ -140,6 +140,7 @@ block content
 
   section
     h3 Offsets
+    hr
 
     p Use offsets like offset-3 or offset-10 to push content to the side.
 
@@ -179,6 +180,7 @@ block content
 
   section
     h3 Column Breakpoints
+    hr
     p
       | By default, columns will resize until they hit a breakpoint (< 769px) and change to be full-width columns.
       | If you wish to override this behavior, you can add a modifier to a column class of #[+code("sm")], #[+code("md")],  #[+code("lg")], or

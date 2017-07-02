@@ -9,44 +9,104 @@ block content
       | to define the color scheme for the navbar. Content can be aligned to the right by adding a second #[+code("<ul>")] inside the navbar and
       | giving it the #[+code("right")] class. A second right-aligned list can be added to the nav to center the first one.
 
-    nav.navbar.primary
-      ul
-        li
-          a(href="#") Item 1
-        li
-          a(href="#") Item 2
-      ul.right
-        li
-          a(href="#") Item 3
+    .column
+      nav.navbar.primary
+        ul
+          li
+            a(href="#") Item 1
+          li
+            a(href="#") Item 2
+        ul.right
+          li
+            a(href="#") Item 3
+    .column
+      +code_block(`
+      <nav class="navbar primary">
+        <ul>
+          <li>
+            <a href="#">Item 1</a>
+          </li>
+          <li>
+            <a href="#">Item 2</a>
+          </li>
+        </ul>
+        <ul class="right">
+          <li>
+            <a href="#">Item 3</a>
+          </li>
+        </ul>
+      </nav>
+      `)
 
   section
     h3 Links
     p
       | Mark a link as active by adding the #[+code('active')] class to it.
 
-    nav.navbar.secondary
-      .brand BigCorp
-      ul
-        li
-          a(href="#") Link 1
-          a.active(href="#") Link 2
-          a(href="#") Link 3
-          a(href="#") Link 4
+    .column
+      nav.navbar.secondary
+        .brand BigCorp
+        ul
+          li
+            a(href="#") Link 1
+          li
+            a.active(href="#") Link 2
+          li
+            a(href="#") Link 3
+          li
+            a(href="#") Link 4
+    .column
+      +code_block(`
+      <nav class="navbar secondary">
+        <div class="brand">BigCorp</div>
+        <ul>
+          <li>
+            <a href="#">Link 1</a>
+          </li>
+          <li>
+            <a href="#" class="active">Link 2</a>
+          </li>
+          <li>
+            <a href="#">Link 3</a><a href="#">Link 4</a>
+          </li>
+        </ul>
+      </nav>
+      `)
 
   section
     h3 Navbar Items
     p
       | You can add buttons, logos, inline forms, or anything else to a navbar.
 
-    nav.navbar.primary
-      .brand Brand Name
-      ul
-        li
-          a(href="#") Item Link
-      .right
-        .field-inline
-          .attached
-            input.input
-            button.outlined Click Me
-        button.success Log In
-
+    .column
+      nav.navbar.primary
+        .brand Brand Name
+        ul
+          li
+            a(href="#") Item Link
+        .right
+          .field-inline
+            .attached
+              input.input
+              button.outlined Click Me
+          button.success Log In
+    .column
+      +code_block(`
+      <nav class="navbar primary">
+        <div class="brand">Brand Name</div>
+        <ul>
+          <li>
+            <a href="#">Item Link</a>
+          </li>
+        </ul>
+        <div class="right">
+          <div class="field-inline">
+            <div class="attached">
+              <input class="input"/>
+              <button class="outlined">Click Me</button>
+            </div>
+          </div>
+          <button class="success">Log In</button>
+        </div>
+      </nav>
+      `)

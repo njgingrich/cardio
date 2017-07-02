@@ -4,6 +4,7 @@ code {
   border-radius: $base-border-radius;
   padding: 2px 0.3rem;
   white-space: nowrap;
+  font-size: 16px;
 }
 
 pre {
@@ -12,7 +13,6 @@ pre {
   code {
     white-space: pre-wrap;
     font-family: $mono-font-family;
-    font-size: 16px;
     overflow: scroll;
   }
 }

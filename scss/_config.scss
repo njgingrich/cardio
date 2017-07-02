@@ -2,13 +2,42 @@
 $base-border-radius: 0.1rem;
 $base-transition-time: 200ms;
 
+// Putting a null on either side makes next-breakpoint and
+// prev-breakpoint return null instead of an error when used on
+// the outside elements.
+$breakpoints: "xs", "sm", "md", "lg";
+$breakpointMap: (
+  "xs": 415px,
+  "sm": 769px,
+  "md": 1001px,
+  "lg": 1401px
+);
+
 // Responsive breakpoints
-$breakpoint-xs: 415px;
-$breakpoint-sm: 769px;
-$breakpoint-md: 1001px;
-$breakpoint-lg: 1401px;
+$breakpoint-xs: map-get($breakpointMap, "xs");
+$breakpoint-sm: map-get($breakpointMap, "sm");
+$breakpoint-md: map-get($breakpointMap, "md");
+$breakpoint-lg: map-get($breakpointMap, "lg");
 
 // Fonts
 $base-font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $header-font-family: "Libre Baskerville", -apple-system, sans-serif;
 $mono-font-family: "Source Code Pro", monospace;
+
+// Map modifier string to its color
+$colorMap: (
+  "primary": $color-primary,
+  "secondary": $gray-light,
+  "success": $color-success,
+  "warning": $color-warning,
+  "danger": $color-danger
+);
+
+// Map a modifier's background color to its text color
+$modifierColorMap: (
+  "primary": $white,
+  "secondary": $gray-dark,
+  "success": $white,
+  "warning": $white,
+  "danger": $white
+);
